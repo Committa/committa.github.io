@@ -567,3 +567,72 @@
   background: transparent;
 }
 .clients-list__item--muted:hover { color: var(--color-accent); border-color: var(--color-accent); }
+
+/* Trust strip */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6) var(--space-10);
+  padding: var(--space-5) 0;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.trust-item__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Steps grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+.step {
+  text-align: center;
+}
+.step__number {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-inline: auto;
+  margin-bottom: var(--space-4);
+  border-radius: 50%;
+  background: var(--color-hero-bg);
+  color: var(--color-hero-accent);
+  font-family: var(--font-heading);
+  font-size: var(--fs-600);
+  font-weight: 700;
+}
+.step__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-500);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.step__text { color: var(--color-fg-soft); font-size: var(--fs-400); }
+@media (max-width: 768px) {
+  .steps-grid { grid-template-columns: 1fr; }
+}
+
+/* LIRA hero demo card */
+.hero__demo {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-top: var(--space-8);
+}

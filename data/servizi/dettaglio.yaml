@@ -1,28 +1,29 @@
-- title: "Sviluppo per automazione industriale e logistica"
+- title: "Automazione industriale, logistica e intelligenza artificiale"
   icon: cpu
-  description: "Software per la gestione e l'ottimizzazione dei processi produttivi e logistici."
+  description: "Software e agenti IA per la gestione e l'ottimizzazione dei processi produttivi, logistici e documentali."
   list:
     - "**WMS** (Warehouse Management System) — gestione del magazzino: monitoraggio scorte, pianificazione spedizioni, ottimizzazione dello stoccaggio, integrazione con sistemi logistici."
     - "**MES** (Manufacturing Execution System) — monitoraggio e controllo delle operazioni produttive, tracciabilità e visibilità in tempo reale delle attività industriali."
-    - "**HMI** (Human Machine Interface) — interfacce uomomacchina intuitive e personalizzate per il controllo e il monitoraggio degli impianti."
-- title: "Integrazione e comunicazione tra sistemi"
+    - "**HMI** (Human Machine Interface) — interfacce uomo-macchina intuitive e personalizzate per il controllo e il monitoraggio degli impianti."
+    - "**Agenti IA** — automazione di workflow documentali, supporto decisionale e gestione delle non conformità con agenti LLM."
+- title: "Integrazione tra sistemi e piattaforme IA"
   icon: plug
-  description: "Soluzioni per l'interfacciamento di sistemi informatici e hardware, seguendo i principi dell'Industria 4.0."
+  description: "Colleghiamo sistemi industriali e piattaforme di intelligenza artificiale, on-premise e ibride."
   list:
     - "Integrazione tra sistemi ERP, WMS, MES e HMI."
     - "Connessioni a dispositivi industriali: PLC, robot, sensori IoT."
-    - "Automazione dei flussi di dati per sincronizzare e velocizzare i processi."
+    - "Integrazione di modelli LLM e agenti IA nei flussi operativi esistenti."
 - title: "Assistenza tecnica e manutenzione"
   icon: life-buoy
-  description: "Supporto post-implementazione per garantire il funzionamento ottimale dei software nel tempo."
+  description: "Supporto post-implementazione per software industriali e soluzioni IA, garantendo funzionamento ottimale nel tempo."
   list:
-    - "Supporto post-implementazione per garantire il funzionamento ottimale."
-    - "Diagnosi e risoluzione di problemi tecnici, anche da remoto."
-    - "Aggiornamenti e miglioramenti per adeguare i software a nuove esigenze operative."
-- title: "Consulenza tecnica e formazione"
+    - "Supporto tecnico e troubleshooting, anche da remoto."
+    - "Diagnosi e risoluzione di problemi su software industriale e agenti IA."
+    - "Aggiornamenti e miglioramenti per adeguare i sistemi a nuove esigenze operative."
+- title: "Consulenza e formazione"
   icon: graduation-cap
-  description: "Analisi dei processi, consulenza sull'Industria 4.0 e formazione del personale."
+  description: "Analisi dei processi, consulenza su Industria 4.0 e intelligenza artificiale, formazione del personale."
   list:
-    - "Analisi dei processi aziendali per identificare soluzioni su misura."
-    - "Consulenza per l'adozione di tecnologie avanzate nell'Industria 4.0."
-    - "Formazione del personale sull'uso e la gestione delle applicazioni sviluppate."
+    - "Analisi dei processi aziendali per identificare opportunità di automazione e IA."
+    - "Consulenza per l'adozione di tecnologie Industria 4.0 e soluzioni di intelligenza artificiale."
+    - "Formazione del personale su strumenti software, LIRA e agenti IA."

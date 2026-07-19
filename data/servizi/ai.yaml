@@ -1,20 +1,20 @@
 heading: "Soluzioni di intelligenza artificiale"
-lead: "Dalla consulenza allo sviluppo: aiutiamo le aziende ad adottare l'intelligenza artificiale per automatizzare processi, estrarre valore dai dati e prendere decisioni più rapide. On-premise, senza cedere dati a terzi."
+lead: "Oltre ai servizi di sviluppo tradizionali, progettiamo e realizziamo soluzioni di intelligenza artificiale su misura: agenti LLM, RAG on-premise, automazione dei processi — tutto integrato con i tuoi sistemi, senza cedere dati a terzi."
 cards:
-  - title: "Agenti AI per l'automazione dei processi"
+  - title: "Agenti IA per l'automazione dei processi"
     icon: sparkles
     description: "Progettiamo e sviluppiamo agenti basati su LLM che automatizzano workflow complessi: dall'elaborazione documentale alla gestione delle non conformità, fino al supporto decisionale in produzione."
     list:
-      - "Analisi dei processi e identificazione delle opportunità di automazione con AI"
+      - "Analisi dei processi e identificazione delle opportunità di automazione con IA"
       - "Sviluppo di agenti LLM integrati con i tuoi sistemi (ERP, WMS, MES)"
-      - "Agenti con tool use: l'AI non risponde e basta, esegue azioni sui tuoi dati"
+      - "Agenti con tool use: l'IA non risponde e basta, esegue azioni sui tuoi dati"
       - "Deployment on-premise, senza inviare dati a servizi cloud di terze parti"
-  - title: "LIRA — la tua AI sul tuo patrimonio documentale"
+  - title: "LIRA — L'IA che conosce i tuoi documenti"
     icon: cpu
     description: "Il nostro prodotto RAG on-premise: risposte precise costruite sui tuoi documenti, non su internet. Perfetto per manuali tecnici, contratti, procedure e archivi normativi."
     list:
       - "Risposte verificabili con citazione puntuale della fonte"
       - "Indicizzazione di PDF, docx, immagini e documenti tecnici"
       - "Tutto on-premise, nessun dato inviato all'esterno"
-      - "API compatibile OpenAI e server MCP per integrarlo nei tuoi tool"
+      - "API compatibile OpenIA e server MCP per integrarlo nei tuoi tool"
     link: "/lira/"

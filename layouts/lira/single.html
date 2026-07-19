@@ -7,20 +7,74 @@
   <header class="hero hero--compact hero--dark">
     <div class="container">
       <p class="hero__eyebrow">LIRA · Libreria di Informazioni e Risorse Aziendali</p>
-      <h1 class="hero__title">LIRA &mdash; la tua AI sul tuo patrimonio documentale.</h1>
-      <p class="hero__lead">Non un'altra chatbot: una risposta precisa costruita sui tuoi documenti, per le tue domande, secondo le tue regole. On-premise, affidabile, fondata sui tuoi documenti.</p>
+      <h1 class="hero__title">LIRA &mdash; L'IA che conosce i tuoi documenti.</h1>
+      <p class="hero__lead">Risposte precise, verificate e con citazione delle fonti &mdash; direttamente dai tuoi documenti. Nessun dato inviato all'esterno: tutto on-premise.</p>
       <div class="hero__actions">
-        <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Valuta il tuo caso d'uso</a>
-        <a href="mailto:info@committa.it" class="btn btn--ghost btn--lg">Parla con noi</a>
+        <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Richiedi una demo</a>
+        <a href="#come-funziona" class="btn btn--ghost btn--lg">Come funziona</a>
+      </div>
+      <div class="hero__demo">
+        <div class="lira-preview__card" aria-hidden="true">
+          <div class="lira-preview__card-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>Quali sono gli indirizzi delle aree dati del PLC sulla linea di confezionamento 3?</span>
+          </div>
+          <div class="lira-preview__card-answer">
+            <p>Il PLC della linea di confezionamento 3 utilizza l'area DB50 per i comandi e DB51 per gli stati, con mappatura Modbus a partire dal registro 40001.</p>
+            <p class="lira-preview__cite">— manuale_tecnico_LC3.pdf, § 4.2, p. 27</p>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
+  <section class="section section--tint" data-reveal>
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+          <span>100% on-premise</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <span>GDPR-ready</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+          <span>Nessun dato a terzi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" data-reveal>
     <div class="container container--narrow">
-      <h2 class="section__title">Non la stessa AI di tutti. <span class="section__title-accent">La tua.</span></h2>
-      <p class="section__lead section__lead--left">Le AI generiche sono potenti ma hanno un limite strutturale: <em>non conoscono la tua azienda</em>. Non sanno cosa c'è nei tuoi contratti, nei tuoi manuali tecnici, nei protocolli che usi da vent'anni. Così generalizzano. Inventano. <strong>Allucinano.</strong></p>
-      <p>LIRA non è una piattaforma preconfezionata da adattare a te. <strong>È il contrario</strong>: la piattaforma si modella su di te. La qualità dei risultati è <em>praticamente ineguagliabile</em> da qualunque soluzione out-of-the-box, per un motivo semplice: <strong>loro partono da internet, noi partiamo dai tuoi documenti.</strong></p>
+      <h2 class="section__title">Fatta per voi, non per tutti.</h2>
+      <p class="section__lead section__lead--left">Le IA generiche sono potenti ma hanno un limite strutturale: <em>non conoscono la tua azienda</em>. Non sanno cosa c'è nei tuoi contratti, nei tuoi manuali tecnici, nei protocolli che usi da vent'anni. Così generalizzano. Si inventano le risposte. Tu hai bisogno di fatti, non di fantasia.</p>
+      <p>LIRA non è una piattaforma preconfezionata da adattare a te. <strong>È il contrario</strong>: la piattaforma si modella su di te. I risultati sono <em>qualitativamente superiori</em> a qualunque soluzione out-of-the-box, per un motivo semplice: <strong>loro partono da internet, noi partiamo dai tuoi documenti.</strong></p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="come-funziona" data-reveal>
+    <div class="container">
+      <h2 class="section__title">Come funziona</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Connetti le tue fonti</h3>
+          <p class="step__text">LIRA si integra con i tuoi sistemi via connettori nativi (filesystem, cloud storage, database, FTP, SharePoint) e connettori custom per basi dati proprietarie. Monitora le tue fonti in automatico: ogni nuovo documento e ogni modifica vengono rilevati e processati senza intervento manuale.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3 class="step__title">Indicizza in automatico</h3>
+          <p class="step__text">Ogni documento aggiunto o modificato viene indicizzato senza operazioni manuali. Embedding semantici, keyword, immagini: tutto on-premise, sempre aggiornato.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Chiedi e ricevi</h3>
+          <p class="step__text">Fai una domanda in linguaggio naturale. LIRA recupera i passaggi rilevanti e genera una risposta con citazione puntuale della fonte.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -37,7 +91,7 @@
       <div class="architecture-grid">
         <div class="architecture-block">
           <h3>RAG-U &mdash; il motore di retrieval</h3>
-          <p>RAG-U è la pipeline di ingestion, indicizzazione e retrieval che alimenta l'LLM con il contesto estratto dal tuo patrimonio documentale.</p>
+          <p>RAG-U è la pipeline di ingestion, indicizzazione e retrieval che alimenta l'LLM con il contesto estratto dai tuoi documenti.</p>
           <ol class="architecture-steps">
             <li><strong>Ingestione</strong> — legge i tuoi documenti (.docx, PDF, formati misti), estrae testo, tabelle e immagini, divide in chunk significativi.</li>
             <li><strong>Indicizzazione</strong> — trasforma ogni chunk in vettori semantici + indice BM25 per keyword, dentro un vector store on-prem.</li>
@@ -50,7 +104,7 @@
           <p>Sopra RAG-U gira <strong>LIRA Assistant</strong>, l'interfaccia che gli utenti usano effettivamente: una chat che risponde in linguaggio naturale, cita le fonti, può essere brandizzata e integrata nei tuoi flussi.</p>
           <ul class="architecture-features">
             <li>API compatibile OpenAI → si integra con qualsiasi tool o framework che già usa l'API Chat Completions di OpenAI</li>
-            <li>Server <abbr title="Model Context Protocol">MCP</abbr> → espone la retrieval come strumento a client MCP e agenti AI esterni</li>
+            <li>Server <abbr title="Model Context Protocol">MCP</abbr> → espone la retrieval come strumento a client MCP e agenti IA esterni</li>
           </ul>
         </div>
       </div>
@@ -68,7 +122,7 @@
       <h2 class="section__title">Per chi è</h2>
       <ul class="bullets-list">
         {{- range $perChi -}}
-        <li>{{ . }}</li>
+        <li>{{ . | markdownify | safeHTML }}</li>
         {{- end -}}
       </ul>
     </div>
@@ -79,7 +133,7 @@
       <h2 class="section__title">Cosa ricevi</h2>
       <ul class="bullets-list bullets-list--check">
         {{- range $cosaRicevi -}}
-        <li>{{ . }}</li>
+        <li>{{ . | markdownify | safeHTML }}</li>
         {{- end -}}
       </ul>
     </div>
@@ -87,8 +141,8 @@
 
   <section class="manifesto" data-reveal>
     <div class="container container--narrow">
-      <p class="manifesto__quote">LIRA: la chatbot smette di essere una promessa generica e diventa una risposta precisa — la risposta esatta, sulla tua documentazione, dentro la tua azienda.</p>
-      <p class="manifesto__sig">Non la stessa AI di tutti. <strong>La tua.</strong></p>
+      <p class="manifesto__quote">Smetti di cercare. Chiedi a LIRA.</p>
+      <p class="manifesto__sig">La vostra IA aziendale.</p>
     </div>
   </section>
 

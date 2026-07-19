@@ -1,15 +1,13 @@
 {{ define "main" }}
 {{- $commerciali := hugo.Data.servizi.commerciali -}}
 {{- $dettaglio := hugo.Data.servizi.dettaglio -}}
-{{- $member := index hugo.Data.team.members 0 -}}
-{{- $anni := sub (int (now.Year)) (int $member.started_year) -}}
-{{- if lt (int (now.Month)) (int $member.started_month) -}}{{- $anni = sub $anni 1 -}}{{- end -}}
+{{- $ai := hugo.Data.servizi.ai -}}
 <article class="content-page servizi-page">
   <header class="hero hero--compact hero--dark">
     <div class="container">
       <p class="hero__eyebrow">Servizi</p>
       <h1 class="hero__title">Quattro aree di competenza, un solo interlocutore.</h1>
-      <p class="hero__lead">Sviluppo software, database, infrastrutture e assistenza &mdash; dal requisito al supporto post-implementazione. {{ $anni }} anni di lavoro sul campo con alcune delle più grandi multinazionali del food &amp; beverage e oltre.</p>
+      <p class="hero__lead">Sviluppo software, database, infrastrutture e assistenza &mdash; dal requisito al supporto post-implementazione, per alcune delle più grandi multinazionali del food &amp; beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali.</p>
       <div class="hero__actions">
         <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Contattaci</a>
       </div>
@@ -19,7 +17,7 @@
   <section class="section section--text-center" data-reveal>
     <div class="container">
       <h2 class="section__title">I quattro servizi</h2>
-      <p class="section__lead">Dall'analisi alla manutenzione: ogni servizio copre un pezzo del ciclo di vita del software, e si combina con gli altri senza salti di responsabile.</p>
+      <p class="section__lead">Dall'analisi alla manutenzione, passando per l'intelligenza artificiale: ogni servizio copre un pezzo del ciclo di vita del software, e si combina con gli altri senza salti di responsabile.</p>
       <div class="grid grid--2">
         {{- range $commerciali -}}
         {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list) }}
@@ -27,6 +25,20 @@
       </div>
     </div>
   </section>
+
+  {{- with $ai -}}
+  <section class="section section--text-center" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ .heading }}</h2>
+      <p class="section__lead">{{ .lead }}</p>
+      <div class="grid grid--2">
+        {{- range .cards -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list "link" .link) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+  {{- end -}}
 
   <section class="section section--tint section--text-center" data-reveal>
     <div class="container">

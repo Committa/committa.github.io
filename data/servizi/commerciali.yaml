@@ -8,19 +8,19 @@
     - "Supporto post-implementazione e miglioramenti progressivi"
 - title: "Progettazione e gestione database"
   icon: database
-  description: "Database stabili, sicuri e performanti — progettati per il tuo carico reale, non per benchmark generici."
+  description: "Database relazionali, NoSQL e vettoriali — progettati per il tuo carico reale, non per benchmark generici."
   list:
-    - " Modellazione dati relazionale e documentale"
+    - "Modellazione dati relazionale, documentale e vettoriale"
     - "Ottimizzazione di indici, query e piani di esecuzione"
     - "Migrazioni, backup e disaster recovery"
     - "Manutenzione continua e monitoraggio delle prestazioni"
 - title: "Infrastrutture server"
   icon: server
-  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili e affidabili."
+  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili e affidabili, con approccio DevOps."
   list:
     - "Dimensionamento hardware e virtualizzazione"
     - "Configurazione di rete, storage e sicurezza"
-    - "Deployment containerizzato e orchestrazione"
+    - "CI/CD, deployment containerizzato e orchestrazione"
     - "Hardening, monitoring e procedure di ripristino"
 - title: "Assistenza tecnica"
   icon: life-buoy

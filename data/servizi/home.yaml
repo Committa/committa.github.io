@@ -3,10 +3,10 @@
   description: "Software su misura dall'analisi dei requisiti al supporto post-implementazione, con tecnologie e metodologie aggiornate."
 - title: "Progettazione e gestione database"
   icon: database
-  description: "Progettazione, implementazione e manutenzione di database stabili, sicuri e performanti — sempre aggiornati."
+  description: "Database relazionali, NoSQL e vettoriali: progettazione, implementazione e manutenzione. Stabili, sicuri e performanti."
 - title: "Infrastrutture server"
   icon: server
-  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili, dimensionate per prestazioni e sicurezza."
+  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili, con pratiche DevOps per deployment e automazione."
 - title: "Assistenza tecnica"
   icon: life-buoy
   description: "Supporto dedicato, troubleshooting di emergenza e consulenza su best practice per garantire continuità operativa."

@@ -1,14 +1,11 @@
 {{ define "main" }}
 {{- $servizi := hugo.Data.servizi.home -}}
 {{- $clienti := hugo.Data.clienti -}}
-{{- $member := index hugo.Data.team.members 0 -}}
-{{- $anni := sub (int (now.Year)) (int $member.started_year) -}}
-{{- if lt (int (now.Month)) (int $member.started_month) -}}{{- $anni = sub $anni 1 -}}{{- end -}}
 <section class="hero">
   <div class="container hero__inner">
-    <p class="hero__eyebrow">Industria 4.0 · Supply chain · Logistica</p>
+    <p class="hero__eyebrow">Industria 4.0 · Supply chain · Logistica · IA</p>
     <h1 class="hero__title">{{ .Params.hero_title | default "Soluzioni software su misura per l'industria 4.0" }}</h1>
-    <p class="hero__lead">{{ .Params.hero_lead | default (printf "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI. %d anni di lavoro sul campo per alcune delle più grandi multinazionali del food & beverage e oltre." $anni) }}</p>
+    <p class="hero__lead">{{ .Params.hero_lead | default "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI, per alcune delle più grandi multinazionali del food & beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali." }}</p>
     <div class="hero__actions">
       <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Contattaci</a>
       <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost btn--lg">Scopri i servizi</a>
@@ -19,7 +16,7 @@
 <section class="section section--tint section--text-center" id="servizi" data-reveal>
   <div class="container">
     <h2 class="section__title">Servizi</h2>
-    <p class="section__lead">Quattro aree di competenza, una sola riferita: il tuo progetto.</p>
+    <p class="section__lead">Dallo sviluppo software all'intelligenza artificiale: quattro aree di competenza, un solo interlocutore.</p>
     <div class="grid grid--3">
       {{- range $servizi -}}
       {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "link" "/servizi/") }}
@@ -59,18 +56,12 @@
   <div class="container team-breve">
     <div class="team-breve__text">
       <h2 class="section__title">Il team</h2>
-      <p class="section__lead">Il team di Committa oggi è composto da Marco Baccarani, sviluppatore software con oltre {{ $anni }} anni di esperienza nell'Industria 4.0, nella gestione della supply chain e della logistica.</p>
-      <p>Un percorso internazionale, clienti multinazionali, soluzioni complesse consegnate end-to-end — dal requisito al supporto post-implementazione.</p>
+      <p class="section__lead">Professionisti dell'Industria 4.0, supply chain, logistica e intelligenza artificiale. Sviluppiamo soluzioni end-to-end per il settore food &amp; beverage e oltre — dal requisito al supporto post-implementazione.</p>
       <a href="{{ "/team/" | relURL }}" class="btn btn--ghost">Scopri il team
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
-    <div class="team-breve__stats">
-      <div class="stat-item">
-        <span class="stat-item__value">{{ $anni }}</span>
-        <span class="stat-item__label">{{ if eq $anni 1 }}anno{{ else }}anni{{ end }} di esperienza</span>
-      </div>
-    </div>
+    
   </div>
 </section>
 

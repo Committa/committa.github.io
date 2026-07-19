@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="color-scheme" content="dark light">
+<meta name="color-scheme" content="dark">
 <title>{{ if .IsHome }}{{ .Title | default .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
 {{- with .Description | default .Site.Params.defaultDescription }}
 <meta name="description" content="{{ . }}">
@@ -40,13 +40,3 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <link rel="stylesheet" href="{{ $css2.RelPermalink }}">
 
-{{- /* Set theme before paint to avoid FOUC */ -}}
-<script>
-  (function() {
-    try {
-      var stored = localStorage.getItem('theme');
-      var theme = stored || 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch (e) {}
-  })();
-</script>

@@ -290,9 +290,7 @@
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 100; background: transparent; transition: background-color 200ms var(--easing), box-shadow 200ms; padding-top: env(safe-area-inset-top); }
-.site-header.is-scrolled { background: var(--color-surface); box-shadow: var(--shadow-1); }
-
-[data-theme="dark"] .site-header.is-scrolled { background: color-mix(in srgb, var(--color-surface) 92%, transparent); }
+.site-header.is-scrolled { background: color-mix(in srgb, var(--color-surface) 92%, transparent); box-shadow: var(--shadow-1); }
 
 .topbar {
   background: var(--color-hero-bg);
@@ -303,34 +301,12 @@
 .topbar__text a { color: var(--color-on-hero); text-decoration: underline dotted rgba(255,255,255,0.4); }
 .topbar__text a:hover { color: var(--color-on-hero); text-decoration: underline; }
 
-.theme-toggle {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--color-on-hero);
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: border-color 150ms, background-color 150ms;
-}
-.theme-toggle:hover { border-color: rgba(255, 255, 255, 0.55); }
-.theme-toggle:focus-visible { outline: 3px solid var(--color-ring); outline-offset: 2px; }
-[data-theme="light"] .icon-moon { display: block; }
-[data-theme="light"] .icon-sun { display: none; }
-[data-theme="dark"] .icon-moon { display: none; }
-[data-theme="dark"] .icon-sun { display: block; }
-
-.nav { border-top: 1px solid var(--color-border); }
-[data-theme="dark"] .nav { border-color: rgba(255, 255, 255, 0.08); }
+.nav { border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .site-header.is-scrolled .nav { border-color: transparent; }
 
 .nav__inner { display: flex; align-items: center; gap: var(--space-5); min-height: 84px; }
 .brand { display: inline-flex; flex: 1 1 auto; }
 .brand__logo { height: 64px; width: auto; }
-[data-theme="light"] .brand__logo--dark { display: none; }
-[data-theme="dark"] .brand__logo--light { display: none; }
 
 .nav__menu { display: flex; align-items: center; gap: var(--space-5); margin-left: auto; }
 .nav__link {

@@ -1,25 +1,14 @@
-{{- $logo := .Site.Params.logo | default "images/MainLogo.svg" -}}
 {{- $logoInverted := .Site.Params.logo_inverted | default "images/InvertedLogo.svg" -}}
 <header class="site-header" id="site-header">
   <div class="topbar">
     <div class="container topbar__inner">
       <span class="topbar__text">Soluzioni software &amp; IA per l'Industria 4.0</span>
-      <button class="theme-toggle" type="button" aria-label="Cambia tema chiaro/scuro" data-theme-toggle>
-        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-        </svg>
-        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
     </div>
   </div>
   <div class="nav" aria-label="Navigazione principale">
     <div class="container nav__inner">
       <a href="{{ "/" | relURL }}" class="brand" aria-label="Committa — home">
-        <img src="{{ $logo | relURL }}" alt="Committa" class="brand__logo brand__logo--light">
-        <img src="{{ $logoInverted | relURL }}" alt="Committa" class="brand__logo brand__logo--dark">
+        <img src="{{ $logoInverted | relURL }}" alt="Committa" class="brand__logo">
       </a>
       <nav class="nav__menu" id="nav-menu" aria-label="Menu principale">
         {{- range .Site.Menus.main -}}

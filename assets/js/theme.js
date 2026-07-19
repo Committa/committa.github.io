@@ -1,24 +1,6 @@
 (function () {
   'use strict';
 
-  // Dark mode toggle
-  var toggle = document.querySelector('[data-theme-toggle]');
-  if (toggle) {
-    var root = document.documentElement;
-    function syncToggle() {
-      var theme = root.getAttribute('data-theme') || 'light';
-      toggle.setAttribute('aria-pressed', String(theme === 'dark'));
-    }
-    syncToggle();
-    toggle.addEventListener('click', function () {
-      var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      var next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-      syncToggle();
-    });
-  }
-
   // Mobile nav drawer
   var navToggle = document.querySelector('[data-nav-toggle]');
   var navDrawer = document.querySelector('[data-nav-drawer]');

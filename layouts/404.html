@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="section section--centered not-found">
+  <div class="container container--narrow">
+    <p class="not-found__code">404</p>
+    <h1 class="page-header__title">Pagina non trovata</h1>
+    <p class="page-header__lead">La pagina che cercavi non esiste o è stata spostata.</p>
+    <div class="hero__actions">
+      <a href="{{ "/" | relURL }}" class="btn btn--primary btn--lg">Torna alla home</a>
+      <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost btn--lg">Vai ai servizi</a>
+    </div>
+  </div>
+</section>
+{{ end }}

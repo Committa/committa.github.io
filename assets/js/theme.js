@@ -1,0 +1,70 @@
+(function () {
+  'use strict';
+
+  // Dark mode toggle
+  var toggle = document.querySelector('[data-theme-toggle]');
+  if (toggle) {
+    var root = document.documentElement;
+    function syncToggle() {
+      var theme = root.getAttribute('data-theme') || 'light';
+      toggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    }
+    syncToggle();
+    toggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncToggle();
+    });
+  }
+
+  // Mobile nav drawer
+  var navToggle = document.querySelector('[data-nav-toggle]');
+  var navDrawer = document.querySelector('[data-nav-drawer]');
+  var navClose = document.querySelector('[data-nav-close]');
+
+  function setDrawer(open) {
+    if (!navDrawer || !navToggle) return;
+    if (open) {
+      navDrawer.hidden = false;
+      requestAnimationFrame(function () { navDrawer.classList.add('is-open'); });
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Chiudi menu');
+      document.body.style.overflow = 'hidden';
+    } else {
+      navDrawer.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Apri menu');
+      document.body.style.overflow = '';
+      setTimeout(function () { navDrawer.hidden = true; }, 250);
+    }
+  }
+
+  if (navToggle && navDrawer) {
+    navToggle.addEventListener('click', function () {
+      var open = navToggle.getAttribute('aria-expanded') === 'true';
+      setDrawer(!open);
+    });
+    if (navClose) navClose.addEventListener('click', function () { setDrawer(false); });
+    navDrawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setDrawer(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        setDrawer(false);
+        navToggle.focus();
+      }
+    });
+  }
+
+  // Header background on scroll
+  var header = document.getElementById('site-header');
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+})();

@@ -1,0 +1,4 @@
+{{- $theme := resources.Get "js/theme.js" | minify | fingerprint -}}
+{{- $reveal := resources.Get "js/reveal.js" | minify | fingerprint -}}
+<script src="{{ $theme.RelPermalink }}" defer></script>
+<script src="{{ $reveal.RelPermalink }}" defer></script>

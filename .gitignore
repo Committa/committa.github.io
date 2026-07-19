@@ -1,0 +1,10 @@
+public/
+.hugo_build.lock
+resources/
+temp/
+
+# Local opencode skill packs (not part of the site)
+.opencode/skills/
+
+# Local agent instructions
+AGENTS.md

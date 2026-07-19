@@ -1,0 +1,100 @@
+{{ define "main" }}
+{{- $servizi := hugo.Data.servizi.home -}}
+{{- $clienti := hugo.Data.clienti -}}
+<section class="hero">
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">Industria 4.0 · Supply chain · Logistica</p>
+    <h1 class="hero__title">{{ .Params.hero_title | default "Soluzioni software su misura per l'industria 4.0" }}</h1>
+    <p class="hero__lead">{{ .Params.hero_lead | default "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI. Quindici anni di lavoro sul campo per alcune delle più grandi multinazionali del food & beverage e oltre." }}</p>
+    <div class="hero__actions">
+      <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Contattaci</a>
+      <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost btn--lg">Scopri i servizi</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="servizi" data-reveal>
+  <div class="container">
+    <h2 class="section__title">Servizi</h2>
+    <p class="section__lead">Quattro aree di competenza, una sola riferita: il tuo progetto.</p>
+    <div class="grid grid--3">
+      {{- range $servizi -}}
+      {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "link" "/servizi/") }}
+      {{- end -}}
+    </div>
+    <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost section__cta">Vedi tutti i dettagli
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+    </a>
+  </div>
+</section>
+
+<section class="section section--accent" id="lira-preview" data-reveal>
+  <div class="container lira-preview">
+    <div class="lira-preview__text">
+      <p class="lira-preview__eyebrow">Prodotto</p>
+      <h2 class="lira-preview__title">LIRA</h2>
+      <p class="lira-preview__lead">La tua AI sul tuo patrimonio documentale. On-premise, verificabile, senza allucinazioni.</p>
+      <p class="lira-preview__body">Non un'altra chatbot: una risposta precisa costruita sui tuoi documenti, per le tue domande, secondo le tue regole. RAG-U pensa, Lira Assistant parla.</p>
+      <a href="{{ "/lira/" | relURL }}" class="btn btn--primary btn--lg">Scopri LIRA
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+    <div class="lira-preview__card" aria-hidden="true">
+      <div class="lira-preview__card-row">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>Qual è la clausola di penalty sul contratto con il fornitore X?</span>
+      </div>
+      <div class="lira-preview__card-answer">
+        <p>Il contratto con il fornitore X prevede una clausola di penalty del 2% sul valore della spedizione in caso di ritardo superiore a 48 ore.</p>
+        <p class="lira-preview__cite">— contratto_fornitore_X.pdf, art. 7.3, p. 14</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="chi-sono" data-reveal>
+  <div class="container chi-sono-breve">
+    <div class="chi-sono-breve__text">
+      <h2 class="section__title">Chi sono</h2>
+      <p class="section__lead">Marco Baccarani, sviluppatore software con oltre 15 anni di esperienza nell'Industria 4.0, nella gestione della supply chain e della logistica.</p>
+      <p>Un percorso internazionale, clienti multinazionali, soluzioni complesse consegnate end-to-end — dal requisito al supporto post-implementazione.</p>
+      <a href="{{ "/chi-sono/" | relURL }}" class="btn btn--ghost">Conosci Marco
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+    <div class="chi-sono-breve__stats">
+      <div class="stat-item">
+        <span class="stat-item__value">15+</span>
+        <span class="stat-item__label">anni di esperienza</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__value">9</span>
+        <span class="stat-item__label">multinazionali servite</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__value">4.0</span>
+        <span class="stat-item__label">Industria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="clienti" data-reveal>
+  <div class="container">
+    <h2 class="section__title">Clienti per cui ho lavorato</h2>
+    <p class="section__lead">Una selezione di multinazionali attive nei settori food & beverage, beverage, logistica e oltre.</p>
+    <ul class="clients-list">
+      {{- range $clienti -}}
+      <li class="clients-list__item">{{ . }}</li>
+      {{- end -}}
+    </ul>
+  </div>
+</section>
+
+{{ partial "cta.html" (dict
+  "title" "Parla con noi"
+  "text" "Valutazione gratuita del tuo progetto o del tuo caso d'uso LIRA. Una mail, una risposta entro 24 ore lavorative."
+  "cta" "Contattaci"
+  "url" "/contatti/"
+) }}
+{{ end }}

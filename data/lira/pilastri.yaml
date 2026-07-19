@@ -1,0 +1,30 @@
+- title: "Sovranità totale dei dati"
+  icon: shield
+  description: "LIRA nasce 100% on-premise. Niente dati che viaggiano verso servizi esterni, niente chiavi API di terzi, niente 'fidati di noi'."
+  list:
+    - "Pipeline, modelli, vector store, LLM — tutto gira nel tuo perimetro"
+    - "Conforme GDPR, auditabile, pronto per policy di sicurezza anche restrittive"
+    - "Deployment ibrido (parte on-prem, parte cloud) o 100% cloud quando serve — senza riprogettare"
+- title: "Scalabile, davvero"
+  icon: scale
+  description: "Architettura containerizzata e modulare — parte da una singola macchina e cresce fino a cluster su infrastrutture distribuite."
+  list:
+    - "Documentazione da 10.000 pagine o 10 milioni? La stessa piattaforma, dimensionata di conseguenza"
+    - "Embedding, reranking, serving LLM, retrieval — ogni componente scala in modo indipendente"
+- title: "Cucita su misura"
+  icon: settings
+  description: "La piattaforma si modella su di te, non il contrario. Ogni parametro è configurabile e tarato sul tuo contesto."
+  list:
+    - "Modello di embedding adatto al dominio (direzionale, tecnico, multilingua)"
+    - "LLM scelto in base al trade-off qualità/costo/latenza che serve a te"
+    - "Chunking tarato sul tipo di documento (contratti vs manuali vs report)"
+    - "Soglie di retrieval e reranking ottimizzate sui tuoi dati reali"
+    - "Connettori per filesystem, SMB, integrazioni future (SharePoint, Documentum, ERP)"
+    - "Prompt e UI brandizzati come core del tuo brand"
+- title: "Multimodale e verificabile"
+  icon: image
+  description: "Indicizza testo, tabelle e immagini. Ogni risposta — ogni singola risposta — riporta il passaggio sorgente."
+  list:
+    - "Testo, tabelle, immagini, grafici e schemi di impianto — tutto entra nel knowledge base"
+    - "Le immagini ricevono didascalie generate automaticamente da modelli di visione"
+    - "Niente scatola nera, niente 'l'ha detto l'AI' — audit completo, sempre"

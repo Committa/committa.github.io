@@ -1,0 +1,117 @@
+baseURL = 'https://committa.it/'
+title = 'Committa'
+languageCode = 'it'
+defaultContentLanguage = 'it'
+summaryLength = 70
+pluralizelisttitles = false
+
+# Non abbiamo blog/tassonomie: disabilitiamo i tipi non usati
+disableKinds = ['taxonomy', 'term']
+
+[pagination]
+  pagerSize = 10
+
+# Main menu
+[menu]
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Servizi"
+  url = "/servizi/"
+  weight = 2
+
+[[menu.main]]
+  name = "Chi sono"
+  url = "/chi-sono/"
+  weight = 3
+
+[[menu.main]]
+  name = "LIRA"
+  url = "/lira/"
+  weight = 4
+
+[[menu.main]]
+  name = "Contatti"
+  url = "/contatti/"
+  weight = 5
+
+# Top bar
+[[menu.topbar]]
+  weight = 1
+  name = "Email"
+  url = "mailto:info@committa.it"
+  pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+  author = "Marco Baccarani"
+  defaultKeywords = ["committa", "sviluppo software", "industria 4.0", "wms", "mes", "hmi", "supply chain", "logistica", "rag", "ai on-premise", "consulenza IT"]
+  mainSections = ["servizi", "chi-sono", "lira"]
+  defaultDescription = "Committa — sviluppatore software per l'Industria 4.0, WMS, MES, HMI, integrazione sistemi, consulenza e assistenza. E LIRA: la tua AI sul tuo patrimonio documentale, on-premise."
+
+  # Social media (compilare quando disponibile)
+  facebook_site = ""
+  twitter_site = ""
+  linkedin_site = ""
+
+  # Stile logico (consumato dal tema custom)
+  style = "trust-authority"
+
+  enableGoogleMaps = false
+
+  # Contact form via Formspree: creare un form su formspree.io e incollare l'endpoint qui
+  # Esempio: "https://formspree.io/f/xyzkab12"
+  formspree_action = ""
+  contact_form_ajax = false
+  enableRecaptchaInContactForm = false
+  googleRecaptchaKey = ""
+
+  about_us = "Committa è Marco Baccarani: oltre 15 anni di sviluppo software per l'Industria 4.0, supply chain e logistica. Soluzioni su misura per multinazionali del food & beverage e oltre."
+  copyright = "Copyright (c) 2026, Committa; all rights reserved."
+  foundation_year = 2024
+
+  date_format = "2 January 2006"
+  dropdown_mouse_over = false
+
+  disabled_logo = false
+  logo_text = "Committa"
+
+  logo = "images/MainLogo.svg"
+  logo_inverted = "images/InvertedLogo.svg"
+  logo_small = "images/Symbol.svg"
+
+  address = """<p class="text-uppercase"><strong>Committa</strong></p>"""
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:contentbasename/"
+
+[params.topbar]
+  enable = true
+  text = """<p class="hidden-sm hidden-xs">Contattaci a info@committa.it</p>"""
+
+[params.widgets]
+  categories = false
+  tags = false
+  search = false
+
+[params.features]
+  enable = true
+  cols = 3
+
+[params.testimonials]
+  enable = false
+  title = "Testimonianze"
+  subtitle = ""
+
+[params.clients]
+  enable = false
+  title = "I Nostri Clienti"
+  subtitle = ""
+
+[params.see_more]
+  enable = false
+
+[params.recent_posts]
+  enable = false

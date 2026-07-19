@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{- $commerciali := hugo.Data.servizi.commerciali -}}
+{{- $dettaglio := hugo.Data.servizi.dettaglio -}}
+<article class="content-page servizi-page">
+  <header class="hero hero--compact hero--dark">
+    <div class="container">
+      <p class="hero__eyebrow">Servizi</p>
+      <h1 class="hero__title">Quattro aree di competenza, un solo interlocutore.</h1>
+      <p class="hero__lead">Sviluppo software, database, infrastrutture e assistenza — dal requisito al supporto post-implementazione. Quindici anni di lavoro sul campo per qualche delle più grandi multinazionali del food &amp; beverage e oltre.</p>
+      <div class="hero__actions">
+        <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Contattaci</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <h2 class="section__title">I quattro servizi</h2>
+      <p class="section__lead">Dall'analisi alla manutenzione: ogni servizio copre un pezzo del ciclo di vita del software, e si combina con gli altri senza salti di responsabile.</p>
+      <div class="grid grid--2">
+        {{- range $commerciali -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" data-reveal>
+    <div class="container">
+      <h2 class="section__title">Cosa posso fare concretamente</h2>
+      <p class="section__lead">Accanto ai quattro servizi commerciali, l'attività operativa spazia su quattro macro-aree che coprono l'intero ciclo di vita del software industriale.</p>
+      <div class="grid grid--2">
+        {{- range $dettaglio -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta.html" (dict
+    "title" "Parla con noi del tuo progetto"
+    "text" "Valutazione gratuita del caso d'uso, del contesto operativo e della compatibilità con i sistemi che già hai. Una mail, una risposta entro 24 ore lavorative."
+    "cta" "Contattaci"
+    "url" "/contatti/"
+  ) }}
+</article>
+{{ end }}

@@ -1,0 +1,12 @@
+- title: "Sviluppo software personalizzato"
+  icon: code-2
+  description: "Software su misura dall'analisi dei requisiti al supporto post-implementazione, con tecnologie e metodologie aggiornate."
+- title: "Progettazione e gestione database"
+  icon: database
+  description: "Progettazione, implementazione e manutenzione di database stabili, sicuri e performanti — sempre aggiornati."
+- title: "Infrastrutture server"
+  icon: server
+  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili, dimensionate per prestazioni e sicurezza."
+- title: "Assistenza tecnica"
+  icon: life-buoy
+  description: "Supporto dedicato, troubleshooting di emergenza e consulenza su best practice per garantire continuità operativa."

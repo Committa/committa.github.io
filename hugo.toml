@@ -24,8 +24,8 @@ disableKinds = ['taxonomy', 'term']
   weight = 2
 
 [[menu.main]]
-  name = "Chi sono"
-  url = "/chi-sono/"
+  name = "Il team"
+  url = "/team/"
   weight = 3
 
 [[menu.main]]
@@ -48,7 +48,7 @@ disableKinds = ['taxonomy', 'term']
 [params]
   author = "Marco Baccarani"
   defaultKeywords = ["committa", "sviluppo software", "industria 4.0", "wms", "mes", "hmi", "supply chain", "logistica", "rag", "ai on-premise", "consulenza IT"]
-  mainSections = ["servizi", "chi-sono", "lira"]
+  mainSections = ["servizi", "team", "lira"]
   defaultDescription = "Committa — sviluppatore software per l'Industria 4.0, WMS, MES, HMI, integrazione sistemi, consulenza e assistenza. E LIRA: la tua AI sul tuo patrimonio documentale, on-premise."
 
   # Social media (compilare quando disponibile)
@@ -68,7 +68,7 @@ disableKinds = ['taxonomy', 'term']
   enableRecaptchaInContactForm = false
   googleRecaptchaKey = ""
 
-  about_us = "Committa è Marco Baccarani: oltre 15 anni di sviluppo software per l'Industria 4.0, supply chain e logistica. Soluzioni su misura per multinazionali del food & beverage e oltre."
+  about_us = "Committa è il team di Marco Baccarani: oltre 18 anni di sviluppo software per l'Industria 4.0, supply chain e logistica. Soluzioni su misura per multinazionali del food & beverage e oltre."
   copyright = "Copyright (c) 2026, Committa; all rights reserved."
   foundation_year = 2024
 

@@ -1,0 +1,75 @@
+{{ define "main" }}
+{{- $team := index hugo.Data "team" -}}
+{{- $clienti := hugo.Data.clienti -}}
+{{- $members := $team.members -}}
+<article class="content-page team-page">
+  <header class="hero hero--compact hero--dark">
+    <div class="container">
+      <p class="hero__eyebrow">Team</p>
+      <h1 class="hero__title">Il team</h1>
+      <p class="hero__lead">Sviluppatori software specializzati nell'Industria 4.0, supply chain e logistica. Lavoriamo con multinazionali del food &amp; beverage e oltre, consegnando soluzioni end-to-end &mdash; dal requisito al supporto post-implementazione.</p>
+    </div>
+  </header>
+
+  {{- range $i, $m := $members -}}
+  {{- $anni := sub (int (now.Year)) (int $m.started_year) -}}
+  {{- if lt (int (now.Month)) (int $m.started_month) -}}{{- $anni = sub $anni 1 -}}{{- end -}}
+  <section class="section team-member" data-reveal>
+    <div class="container team-member__inner">
+      <div class="team-member__avatar">
+        {{- with $m.avatar -}}
+        <img src="{{ . | relURL }}" alt="Avatar di {{ $m.name }}" width="320" height="320" loading="lazy" />
+        {{- end -}}
+      </div>
+      <div class="team-member__body">
+        <p class="team-member__role">{{ $m.role }}</p>
+        <h2 class="section__title team-member__name">{{ $m.name }}</h2>
+        {{- with $m.intro -}}
+        <h3 class="team-member__intro-heading">{{ .heading }}</h3>
+        {{- range .paragraphs -}}
+        <p class="team-member__paragraph">{{ . }}</p>
+        {{- end -}}
+        {{- end -}}
+        <div class="team-member__stat">
+          <span class="stat-item__value">{{ $anni }}</span>
+          <span class="stat-item__label">{{ if eq $anni 1 }}anno{{ else }}anni{{ end }} di esperienza</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{- end -}}
+
+  {{- with $team.approach -}}
+  <section class="section section--tint" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ .heading }}</h2>
+      <p class="section__lead section__lead--left">{{ .lead }}</p>
+      <div class="grid grid--2">
+        {{- range .values -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+  {{- end -}}
+
+  <section class="section section--tint section--text-center" id="clienti" data-reveal>
+    <div class="container">
+      <h2 class="section__title">Clienti con cui collaboriamo</h2>
+      <p class="section__lead">Una selezione di multinazionali attive nei settori food &amp; beverage, beverage, logistica e oltre.</p>
+      <ul class="clients-list">
+        {{- range $clienti -}}
+        <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ end }}">{{ . }}</li>
+        {{- end -}}
+      </ul>
+    </div>
+  </section>
+
+  {{ partial "cta.html" (dict
+    "title" "Lavoriamo insieme"
+    "text" "Valutazione gratuita del tuo progetto o del tuo caso d'uso. Una mail, una risposta entro 24 ore lavorative."
+    "cta" "Contattaci"
+    "url" "/contatti/"
+  ) }}
+</article>
+{{ end }}

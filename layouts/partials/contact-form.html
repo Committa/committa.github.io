@@ -1,21 +1,22 @@
-{{- $action := .Site.Params.formspree_action -}}
+{{- $action := "https://api.web3forms.com/submit" -}}
+{{- $key := .Site.Params.web3forms_access_key -}}
 <section class="section section--contact" data-reveal>
   <div class="container contact-grid">
     <div class="contact-info">
       <h2>Contatti</h2>
-      <p class="contact-info__lead">Scrivimi per una valutazione gratuita del tuo caso d'uso o del tuo progetto. Ti rispondo entro 24 ore lavorative.</p>
+      <p class="contact-info__lead">Scrivici per una valutazione gratuita del tuo caso d'uso o del tuo progetto. Ti rispondiamo entro 24 ore lavorative.</p>
+      {{- with .Site.Params.linkedin_site -}}
       <dl class="contact-info__list">
-        <dt>Email</dt>
-        <dd><a href="mailto:info@committa.it">info@committa.it</a></dd>
-        <dt>Area</dt>
-        <dd>Italia</dd>
-        {{- with .Site.Params.linkedin_site -}}
         <dt>LinkedIn</dt>
         <dd><a href="{{ . }}" rel="noopener">Marco Baccarani</a></dd>
-        {{- end -}}
       </dl>
+      {{- end -}}
     </div>
-    <form class="contact-form" method="POST" action="{{ $action | default "/contatti/" }}"{{ if $action }} data-formspree{{ end }}>
+    <form class="contact-form" method="POST" action="{{ $action }}"{{ if $key }} data-web3forms{{ end }}>
+      <input type="hidden" name="access_key" value="{{ $key }}">
+      <input type="hidden" name="subject" value="Nuovo contatto da committa.it">
+      <input type="hidden" name="from_name" value="Modulo di contatto Committa">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
       <div class="field">
         <label for="cf-name">Nome <span aria-hidden="true">*</span></label>
         <input type="text" id="cf-name" name="name" autocomplete="name" required>
@@ -29,8 +30,11 @@
       <div class="field">
         <label for="cf-reason">Motivo del contatto</label>
         <select id="cf-reason" name="reason">
-          <option value="servizi">Servizi</option>
+          <option value="sviluppo-software">Sviluppo software</option>
           <option value="lira">LIRA</option>
+          <option value="consulenza">Consulenza e formazione</option>
+          <option value="assistenza">Assistenza tecnica</option>
+          <option value="privacy">Privacy</option>
           <option value="altro">Altro</option>
         </select>
       </div>
@@ -39,7 +43,7 @@
         <textarea id="cf-msg" name="message" rows="5" required></textarea>
         <p class="field__error" data-error-for="cf-msg"></p>
       </div>
-      <button type="submit" class="btn btn--primary btn--block">Invia messaggio</button>
+      <button type="submit" class="btn btn--primary btn--block" data-submit-btn>Invia messaggio</button>
       <p class="contact-form__status" data-form-status role="status" aria-live="polite"></p>
     </form>
   </div>

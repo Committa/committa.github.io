@@ -37,7 +37,7 @@ disableKinds = ['taxonomy', 'term']
 [[menu.topbar]]
   weight = 1
   name = "Email"
-  url = "mailto:info@committa.it"
+  url = "/contatti/"
   pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
@@ -56,12 +56,9 @@ disableKinds = ['taxonomy', 'term']
 
   enableGoogleMaps = false
 
-  # Contact form via Formspree: creare un form su formspree.io e incollare l'endpoint qui
-  # Esempio: "https://formspree.io/f/xyzkab12"
-  formspree_action = ""
-  contact_form_ajax = false
-  enableRecaptchaInContactForm = false
-  googleRecaptchaKey = ""
+  # Web3Forms: registrati su web3forms.com, incolla qui l'access key.
+  # La key è pubblica per design — è un identificatore, non un segreto.
+  web3forms_access_key = "b1603ef1-daa7-481c-81e7-75c1d17d02a3"
 
   about_us = "Sviluppiamo soluzioni software per l'Industria 4.0 e l'intelligenza artificiale. WMS, MES, HMI, integrazione sistemi e LIRA: l'IA on-premise fondata sui tuoi documenti."
   copyright = "Copyright (c) 2026, Committa; all rights reserved."
@@ -84,7 +81,7 @@ disableKinds = ['taxonomy', 'term']
 
 [params.topbar]
   enable = true
-  text = """<p class="hidden-sm hidden-xs">Contattaci a info@committa.it</p>"""
+  text = """<p class="hidden-sm hidden-xs">Soluzioni software &amp; IA per l'Industria 4.0</p>"""
 
 [params.widgets]
   categories = false

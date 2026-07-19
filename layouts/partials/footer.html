@@ -15,12 +15,15 @@
         {{- end -}}
       </ul>
     </nav>
+    <div class="site-footer__col site-footer__legal">
+      <h2 class="site-footer__heading">Legale</h2>
+      <ul>
+        <li><a href="{{ "/privacy/" | relURL }}">Privacy</a></li>
+      </ul>
+    </div>
     <div class="site-footer__col site-footer__contact">
       <h2 class="site-footer__heading">Contatti</h2>
-      <p>
-        <a href="mailto:info@committa.it">info@committa.it</a>
-      </p>
-      <p>Italia</p>
+      <p><a href="{{ "/contatti/" | relURL }}">Scrivici</a></p>
       {{- with .Site.Params.linkedin_site -}}
       <p><a href="{{ . }}" rel="noopener">LinkedIn</a></p>
       {{- end -}}
@@ -28,7 +31,7 @@
   </div>
   <div class="site-footer__bar">
     <div class="container">
-      <p>&copy; {{ $yr }} Committa · Marco Baccarani. Tutti i diritti riservati.</p>
+      <p>&copy; {{ $yr }} Committa · Marco Baccarani · P.IVA 03038930354. Tutti i diritti riservati.</p>
     </div>
   </div>
 </footer>

@@ -19,7 +19,7 @@
     - "LLM scelto in base al trade-off qualità/costo/latenza che serve a te"
     - "Chunking tarato sul tipo di documento (contratti vs manuali vs report)"
     - "Soglie di retrieval e reranking ottimizzate sui tuoi dati reali"
-    - "Connettori per filesystem, SMB, integrazioni future (SharePoint, Documentum, ERP)"
+    - "Connettori per filesystem e condivisioni SMB; SharePoint, Documentum, ERP su richiesta"
     - "Prompt e UI brandizzati come core del tuo brand"
 - title: "Multimodale e verificabile"
   icon: image
@@ -27,4 +27,4 @@
   list:
     - "Testo, tabelle, immagini, grafici e schemi di impianto — tutto entra nel knowledge base"
     - "Le immagini ricevono didascalie generate automaticamente da modelli di visione"
-    - "Niente scatola nera, niente 'l'ha detto l'AI' — audit completo, sempre"
+    - "Trasparenza completa sulle fonti: ogni risposta cita il passaggio sorgente, documento e pagina"

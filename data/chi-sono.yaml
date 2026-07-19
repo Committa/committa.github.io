@@ -1,0 +1,32 @@
+stats:
+  - value: "15+"
+    label: "anni di esperienza"
+  - value: "9"
+    label: "multinazionali servite"
+  - value: "4.0"
+    label: "Industria"
+
+intro:
+  heading: "Un percorso internazionale"
+  paragraphs:
+    - "Marco Baccarani è uno sviluppatore software con una carriera di oltre 15 anni nel settore dell'Industria 4.0, della gestione della supply chain e della logistica."
+    - "Il suo percorso professionale è stato arricchito da un'esperienza internazionale, durante la quale ha viaggiato per il mondo e ha avuto l'opportunità di confrontarsi con realtà diverse e sfide sempre in evoluzione."
+    - "Durante questo percorso, Marco ha contribuito allo sviluppo e all'implementazione di impianti e sistemi software complessi, fornendo soluzioni innovative e personalizzate per soddisfare le esigenze specifiche di ciascun cliente."
+
+impegno:
+  heading: "Il mio impegno"
+  paragraphs:
+    - "Esperienza e profonda comprensione delle dinamiche del settore industriale e logistico: un professionista altamente qualificato e affidabile, impegnato a offrire servizi di alta qualità con dedizione costante all'innovazione."
+  values:
+    - icon: "shield"
+      title: "Qualità senza compromessi"
+      description: "Dedizione costante all'innovazione e collaborazione stretta con il cliente per garantire il successo dei progetti."
+    - icon: "settings"
+      title: "Soluzioni su misura"
+      description: "Risposte specifiche per ogni esigenza, indipendentemente dalla complessità o dalla portata del progetto."
+    - icon: "life-buoy"
+      title: "Partner tecnologico affidabile"
+      description: "Comprensione profonda delle sfide del settore, capacità di tradurle in soluzioni concrete e misurabili."
+    - icon: "sparkles"
+      title: "Innovazione costante"
+      description: "Aggiornamento continuo sulle tecnologie dell'Industria 4.0 e adozione delle metodologie più efficaci."

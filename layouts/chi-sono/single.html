@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{- $data := index hugo.Data "chi-sono" -}}
+{{- $clienti := hugo.Data.clienti -}}
+<article class="content-page chi-sono-page">
+  <header class="hero hero--compact hero--dark">
+    <div class="container">
+      <p class="hero__eyebrow">Profilo</p>
+      <h1 class="hero__title">Marco Baccarani</h1>
+      <p class="hero__lead">Sviluppatore software &mdash; Industria 4.0, supply chain e logistica. Oltre 15 anni di lavoro sul campo, un percorso internazionale, clienti multinazionali, soluzioni complesse consegnate end-to-end.</p>
+    </div>
+  </header>
+
+  <section class="section" data-reveal>
+    <div class="container chi-sono-breve">
+      <div class="chi-sono-breve__text">
+        <h2 class="section__title">{{ $data.intro.heading }}</h2>
+        {{- range $data.intro.paragraphs -}}
+        <p>{{ . }}</p>
+        {{- end -}}
+      </div>
+      <div class="chi-sono-breve__stats">
+        {{- range $data.stats -}}
+        <div class="stat-item">
+          <span class="stat-item__value">{{ .value }}</span>
+          <span class="stat-item__label">{{ .label }}</span>
+        </div>
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="clienti" data-reveal>
+    <div class="container">
+      <h2 class="section__title">Clienti per cui ho lavorato</h2>
+      <p class="section__lead">Tra i clienti figurano alcune delle più grandi multinazionali del settore food &amp; beverage e oltre.</p>
+      <ul class="clients-list">
+        {{- range $clienti -}}
+        <li class="clients-list__item">{{ . }}</li>
+        {{- end -}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ $data.impegno.heading }}</h2>
+      {{- range $data.impegno.paragraphs -}}
+      <p class="section__lead section__lead--left">{{ . }}</p>
+      {{- end -}}
+      <div class="grid grid--2">
+        {{- range $data.impegno.values -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta.html" (dict
+    "title" "Lavoriamo insieme"
+    "text" "Valutazione gratuita del tuo progetto o del tuo caso d'uso. Una mail, una risposta entro 24 ore lavorative."
+    "cta" "Contattami"
+    "url" "/contatti/"
+  ) }}
+</article>
+{{ end }}

@@ -1,5 +1,5 @@
-{{- $title := .title | default "Parla con noi" -}}
-{{- $cta := .cta | default "Contattaci" -}}
+{{- $title := .title | default (i18n "cta_talk_to_us") -}}
+{{- $cta := .cta | default (i18n "cta_contact") -}}
 {{- $url := .url | default "/contatti/" -}}
 {{- $secondary := .secondary -}}
 {{- $secondaryUrl := .secondaryUrl | default "/contatti/" -}}
@@ -10,9 +10,9 @@
       {{- with .text -}}<p>{{ . }}</p>{{- end -}}
     </div>
     <div class="cta-band__actions">
-      <a href="{{ $url | relURL }}" class="btn btn--primary btn--lg">{{ $cta }}</a>
+      <a href="{{ $url | relLangURL }}" class="btn btn--primary btn--lg">{{ $cta }}</a>
       {{- if $secondary -}}
-      <a href="{{ $secondaryUrl | relURL }}" class="btn btn--ghost btn--lg">{{ $secondary }}</a>
+      <a href="{{ $secondaryUrl | relLangURL }}" class="btn btn--ghost btn--lg">{{ $secondary }}</a>
       {{- end -}}
     </div>
   </div>

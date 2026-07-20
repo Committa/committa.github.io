@@ -1,13 +1,14 @@
 {{ define "main" }}
-{{- $team := index hugo.Data "team" -}}
-{{- $clienti := hugo.Data.clienti -}}
+{{- $d := index hugo.Data .Site.Language.Lang -}}
+{{- $team := index $d "team" -}}
+{{- $clienti := index $d "clienti" -}}
 {{- $members := $team.members -}}
 <article class="content-page team-page">
   <header class="hero hero--compact hero--dark">
     <div class="container">
-      <p class="hero__eyebrow">Team</p>
-      <h1 class="hero__title">Il team</h1>
-      <p class="hero__lead">Sviluppatori software specializzati nell'Industria 4.0, supply chain e logistica. Lavoriamo con multinazionali del food &amp; beverage e oltre, consegnando soluzioni end-to-end &mdash; dal requisito al supporto post-implementazione.</p>
+      <p class="hero__eyebrow">{{ i18n "team_title" }}</p>
+      <h1 class="hero__title">{{ i18n "team_hero_title" }}</h1>
+      <p class="hero__lead">{{ i18n "team_hero_lead" }}</p>
     </div>
   </header>
 
@@ -32,7 +33,7 @@
         {{- end -}}
         <div class="team-member__stat">
           <span class="stat-item__value">{{ $anni }}</span>
-          <span class="stat-item__label">{{ if eq $anni 1 }}anno{{ else }}anni{{ end }} di esperienza</span>
+          <span class="stat-item__label">{{ if eq $anni 1 }}{{ i18n "team_years_experience_one" }}{{ else }}{{ i18n "team_years_experience_other" }}{{ end }}</span>
         </div>
       </div>
     </div>
@@ -55,20 +56,20 @@
 
   <section class="section section--tint section--text-center" id="clienti" data-reveal>
     <div class="container">
-      <h2 class="section__title">Clienti con cui collaboriamo</h2>
-      <p class="section__lead">Una selezione di multinazionali attive nei settori food &amp; beverage, beverage, logistica e oltre.</p>
+      <h2 class="section__title">{{ i18n "clients_title" }}</h2>
+      <p class="section__lead">{{ i18n "clients_lead" }}</p>
       <ul class="clients-list">
         {{- range $clienti -}}
-        <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ end }}">{{ . }}</li>
+        <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ else if eq . "...and many more" }} clients-list__item--muted{{ end }}">{{ . }}</li>
         {{- end -}}
       </ul>
     </div>
   </section>
 
   {{ partial "cta.html" (dict
-    "title" "Lavoriamo insieme"
-    "text" "Valutazione gratuita del tuo progetto o del tuo caso d'uso. Una mail, una risposta entro 24 ore lavorative."
-    "cta" "Contattaci"
+    "title" (i18n "team_cta_title")
+    "text" (i18n "team_cta_text")
+    "cta" (i18n "cta_contact")
     "url" "/contatti/"
   ) }}
 </article>

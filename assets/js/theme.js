@@ -1,6 +1,15 @@
 (function () {
   'use strict';
 
+  // Language toggle — persist choice to localStorage
+  var langBtns = document.querySelectorAll('.lang-toggle__btn');
+  langBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('hreflang');
+      if (lang) localStorage.setItem('lang', lang);
+    });
+  });
+
   // Mobile nav drawer
   var navToggle = document.querySelector('[data-nav-toggle]');
   var navDrawer = document.querySelector('[data-nav-drawer]');

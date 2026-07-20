@@ -4,4 +4,5 @@ description = "Contatta Committa — Marco Baccarani. Scrivici per una valutazio
 eyebrow = "Contatti"
 lead = "Scrivici per una valutazione gratuita del tuo caso d'uso o del tuo progetto."
 weight = 5
+translationKey = "contatti"
 +++

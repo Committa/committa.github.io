@@ -4,4 +4,5 @@ description = "I servizi Committa: sviluppo software personalizzato, progettazio
 eyebrow = "Servizi"
 layout = "servizi"
 weight = 2
+translationKey = "servizi"
 +++

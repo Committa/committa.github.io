@@ -1,0 +1,331 @@
+# i18n/it.toml — Italian UI strings
+
+[skip_to_content]
+other = "Salta al contenuto"
+
+[home_eyebrow]
+other = "Industria 4.0 · Supply chain · Logistica · IA"
+
+[cta_contact]
+other = "Contattaci"
+
+[cta_discover_services]
+other = "Scopri i servizi"
+
+[services_title]
+other = "Servizi"
+
+[services_lead]
+other = "Dallo sviluppo software all'intelligenza artificiale: quattro aree di competenza, un solo interlocutore."
+
+[services_details_link]
+other = "Vedi tutti i dettagli"
+
+[lira_eyebrow]
+other = "Prodotto"
+
+[lira_preview_title]
+other = "LIRA"
+
+[lira_preview_lead]
+other = "L'IA che risponde con i tuoi documenti, non con internet. On-premise, verificabile, ogni risposta cita le sue fonti."
+
+[lira_preview_body]
+other = "Non l'ennesimo chatbot: una risposta precisa costruita sulle tue fonti, per le tue domande, secondo le tue regole. RAG-U recupera il contesto, LIRA Assistant lo usa per rispondere."
+
+[cta_discover_lira]
+other = "Scopri LIRA"
+
+[team_title]
+other = "Il team"
+
+[team_lead]
+other = "Professionisti dell'Industria 4.0, supply chain, logistica e intelligenza artificiale. Sviluppiamo soluzioni end-to-end per il settore food & beverage e oltre — dal requisito al supporto post-implementazione."
+
+[cta_discover_team]
+other = "Scopri il team"
+
+[clients_title]
+other = "Clienti con cui collaboriamo"
+
+[clients_lead]
+other = "Una selezione di multinazionali attive nei settori food & beverage, beverage, logistica e oltre."
+
+[cta_talk_to_us]
+other = "Parla con noi"
+
+[cta_free_eval]
+other = "Valutazione gratuita del tuo progetto o del tuo caso d'uso LIRA. Una mail, una risposta entro 24 ore lavorative."
+
+[nav_aria_label]
+other = "Navigazione principale"
+
+[nav_menu_label]
+other = "Menu principale"
+
+[nav_mobile_label]
+other = "Menu mobile"
+
+[brand_aria_label]
+other = "Committa — home"
+
+[nav_open]
+other = "Apri menu"
+
+[nav_close]
+other = "Chiudi menu"
+
+[footer_nav]
+other = "Navigazione"
+
+[footer_legal]
+other = "Legale"
+
+[footer_contact]
+other = "Contatti"
+
+[footer_write]
+other = "Scrivici"
+
+[footer_rights]
+other = "Tutti i diritti riservati."
+
+[footer_copyright]
+other = "© %s Committa · Marco Baccarani · P.IVA 03038930354. %s"
+
+[page_not_found]
+other = "Pagina non trovata"
+
+[page_not_found_lead]
+other = "La pagina che cercavi non esiste o è stata spostata."
+
+[cta_back_home]
+other = "Torna alla home"
+
+[cta_go_services]
+other = "Vai ai servizi"
+
+[servizi_hero_title]
+other = "Competenze industriali e intelligenza artificiale, un solo interlocutore."
+
+[servizi_hero_lead]
+other = "Sviluppo software, database, infrastrutture e assistenza &mdash; dal requisito al supporto post-implementazione, per alcune delle più grandi multinazionali del food &amp; beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali."
+
+[servizi_four_title]
+other = "I quattro servizi"
+
+[servizi_four_lead]
+other = "Dall'analisi alla manutenzione, passando per l'intelligenza artificiale: ogni servizio copre un pezzo del ciclo di vita del software, e si combina con gli altri senza salti di responsabile."
+
+[servizi_apply_title]
+other = "Come applichiamo queste competenze"
+
+[servizi_apply_lead]
+other = "Accanto ai servizi commerciali, operiamo su macro-aree che coprono l'intero ciclo di vita del software — dall'automazione industriale all'intelligenza artificiale."
+
+[servizi_cta_title]
+other = "Parla con noi del tuo progetto"
+
+[servizi_cta_text]
+other = "Valutazione gratuita del caso d'uso, del contesto operativo e della compatibilità con i sistemi che già hai. Una mail, una risposta entro 24 ore lavorative."
+
+[team_hero_title]
+other = "Il team"
+
+[team_hero_lead]
+other = "Sviluppatori software specializzati nell'Industria 4.0, supply chain e logistica. Lavoriamo con multinazionali del food &amp; beverage e oltre, consegnando soluzioni end-to-end &mdash; dal requisito al supporto post-implementazione."
+
+[team_years_experience_one]
+other = "anno di esperienza"
+
+[team_years_experience_other]
+other = "anni di esperienza"
+
+[team_cta_title]
+other = "Lavoriamo insieme"
+
+[team_cta_text]
+other = "Valutazione gratuita del tuo progetto o del tuo caso d'uso. Una mail, una risposta entro 24 ore lavorative."
+
+[lira_hero_title]
+other = "LIRA &mdash; L'IA che conosce i tuoi documenti."
+
+[lira_hero_lead]
+other = "Risposte precise, verificate e con citazione delle fonti &mdash; direttamente dai tuoi documenti. Nessun dato inviato all'esterno: tutto on-premise."
+
+[lira_demo_cta]
+other = "Richiedi una demo"
+
+[lira_how_cta]
+other = "Come funziona"
+
+[lira_trust_onpremise]
+other = "100% on-premise"
+
+[lira_trust_gdpr]
+other = "GDPR-ready"
+
+[lira_trust_no_third_party]
+other = "Nessun dato a terzi"
+
+[lira_made_for_you_title]
+other = "Fatta per voi, non per tutti."
+
+[lira_made_for_you_lead]
+other = "Le IA generiche sono potenti ma hanno un limite strutturale: <em>non conoscono la tua azienda</em>. Non sanno cosa c'è nei tuoi contratti, nei tuoi manuali tecnici, nei protocolli che usi da vent'anni. Così generalizzano. Si inventano le risposte. Tu hai bisogno di fatti, non di fantasia."
+
+[lira_made_for_you_body]
+other = "LIRA non è una piattaforma preconfezionata da adattare a te. <strong>È il contrario</strong>: la piattaforma si modella su di te. I risultati sono <em>qualitativamente superiori</em> a qualunque soluzione out-of-the-box, per un motivo semplice: <strong>loro partono da internet, noi partiamo dai tuoi documenti.</strong>"
+
+[lira_how_title]
+other = "Come funziona"
+
+[lira_step1_title]
+other = "Connetti le tue fonti"
+
+[lira_step1_text]
+other = "LIRA si integra con i tuoi sistemi via connettori nativi (filesystem, cloud storage, database, FTP, SharePoint) e connettori custom per basi dati proprietarie. Monitora le tue fonti in automatico: ogni nuovo documento e ogni modifica vengono rilevati e processati senza intervento manuale."
+
+[lira_step2_title]
+other = "Indicizza in automatico"
+
+[lira_step2_text]
+other = "Ogni documento aggiunto o modificato viene indicizzato senza operazioni manuali. Embedding semantici, keyword, immagini: tutto on-premise, sempre aggiornato."
+
+[lira_step3_title]
+other = "Chiedi e ricevi"
+
+[lira_step3_text]
+other = "Fai una domanda in linguaggio naturale. LIRA recupera i passaggi rilevanti e genera una risposta con citazione puntuale della fonte."
+
+[lira_pillars_heading]
+other = "Quattro pilastri che fanno la differenza"
+
+[lira_architecture_title]
+other = "Dietro le quinte: l'architettura in due tempi"
+
+[lira_architecture_lead]
+other = "Il cuore del prodotto è un sistema <abbr title=\"Retrieval-Augmented Generation\">RAG</abbr>: alla domanda dell'utente, recupera i passaggi rilevanti dai tuoi documenti e li fornisce all'LLM come contesto per generare una risposta fondata su quei passaggi — non sulla memoria del modello."
+
+[lira_ragu_title]
+other = "RAG-U &mdash; il motore di retrieval"
+
+[lira_ragu_desc]
+other = "RAG-U è la pipeline di ingestion, indicizzazione e retrieval che alimenta l'LLM con il contesto estratto dai tuoi documenti."
+
+[lira_ragu_step1]
+other = "<strong>Ingestione</strong> — legge i tuoi documenti (.docx, PDF, formati misti), estrae testo, tabelle e immagini, divide in chunk significativi."
+
+[lira_ragu_step2]
+other = "<strong>Indicizzazione</strong> — trasforma ogni chunk in vettori semantici + indice BM25 per keyword, dentro un vector store on-prem."
+
+[lira_ragu_step3]
+other = "<strong>Retrieval</strong> — alla domanda dell'utente, recupera i passaggi più rilevanti combinando ricerca semantica e keyword, li reranka, ricostruisce il contesto di sezione."
+
+[lira_ragu_step4]
+other = "<strong>Indicizzazione immagini</strong> — un worker parallelo genera caption testuali per le immagini e le indicizza semanticamente insieme al testo."
+
+[lira_assistant_title]
+other = "LIRA Assistant &mdash; l'interfaccia conversazionale"
+
+[lira_assistant_desc]
+other = "Sopra RAG-U gira <strong>LIRA Assistant</strong>, l'interfaccia che gli utenti usano effettivamente: una chat che risponde in linguaggio naturale, cita le fonti, può essere brandizzata e integrata nei tuoi flussi."
+
+[lira_assistant_feat1]
+other = "API compatibile OpenAI → si integra con qualsiasi tool o framework che già usa l'API Chat Completions di OpenAI"
+
+[lira_assistant_feat2]
+other = "Server <abbr title=\"Model Context Protocol\">MCP</abbr> → espone la retrieval come strumento a client MCP e agenti IA esterni"
+
+[lira_punchline]
+other = "In sintesi: <strong>RAG-U recupera il contesto, LIRA Assistant lo usa per rispondere.</strong>"
+
+[lira_comparison_heading]
+other = "Dove fa la differenza, concretamente"
+
+[lira_for_whom_title]
+other = "Per chi è"
+
+[lira_what_you_get_title]
+other = "Cosa ricevi"
+
+[lira_manifesto_quote]
+other = "Smetti di cercare. Chiedi a LIRA."
+
+[lira_manifesto_sig]
+other = "La vostra IA aziendale."
+
+[lira_cta_title]
+other = "Valutazione gratuita e demo sul tuo campione"
+
+[lira_cta_text]
+other = "Mandami un campione della tua documentazione: ti mostro LIRA sui tuoi documenti, non su un benchmark generico."
+
+[lira_cta_button]
+other = "Prenota una demo"
+
+[compare_scenario]
+other = "Scenario"
+
+[compare_generic]
+other = "Chatbot generica online"
+
+[card_detail]
+other = "Approfondisci"
+
+[form_heading]
+other = "Contatti"
+
+[form_lead]
+other = "Scrivici per una valutazione gratuita del tuo caso d'uso o del tuo progetto. Ti rispondiamo entro 24 ore lavorative."
+
+[form_name_label]
+other = "Nome"
+
+[form_email_label]
+other = "Email aziendale"
+
+[form_reason_label]
+other = "Motivo del contatto"
+
+[form_reason_dev]
+other = "Sviluppo software"
+
+[form_reason_lira]
+other = "LIRA"
+
+[form_reason_consulting]
+other = "Consulenza e formazione"
+
+[form_reason_support]
+other = "Assistenza tecnica"
+
+[form_reason_privacy]
+other = "Privacy"
+
+[form_reason_other]
+other = "Altro"
+
+[form_message_label]
+other = "Messaggio"
+
+[form_submit]
+other = "Invia messaggio"
+
+[form_subject]
+other = "Nuovo contatto da committa.it"
+
+[lang_switch]
+other = "Cambia lingua"
+
+[form_from_name]
+other = "Modulo di contatto Committa"
+
+[lira_demo_question]
+other = "Quali sono gli indirizzi delle aree dati del PLC sulla linea di confezionamento 3?"
+
+[lira_demo_answer]
+other = "Il PLC della linea di confezionamento 3 utilizza l'area DB50 per i comandi e DB51 per gli stati, con mappatura Modbus a partire dal registro 40001."
+
+[lira_demo_cite]
+other = "— manuale_tecnico_LC3.pdf, § 4.2, p. 27"

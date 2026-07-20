@@ -4,4 +4,5 @@ description = "Il team di Committa: Marco Baccarani, fondatore, sviluppatore sof
 eyebrow = "Team"
 layout = "team"
 weight = 3
+translationKey = "team"
 +++

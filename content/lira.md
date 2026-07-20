@@ -4,4 +4,5 @@ description = "LIRA — L'IA che conosce i tuoi documenti. Risposte precise, ver
 eyebrow = "Prodotto"
 layout = "lira"
 weight = 4
-++++
+translationKey = "lira"
++++

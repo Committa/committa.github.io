@@ -8,22 +8,22 @@
       <p class="site-footer__tagline">{{ .Site.Params.about_us | plainify }}</p>
     </div>
     <nav class="site-footer__col site-footer__nav" aria-label="Footer">
-      <h2 class="site-footer__heading">Navigazione</h2>
+      <h2 class="site-footer__heading">{{ i18n "footer_nav" }}</h2>
       <ul>
         {{- range .Site.Menus.main -}}
-        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
         {{- end -}}
       </ul>
     </nav>
     <div class="site-footer__col site-footer__legal">
-      <h2 class="site-footer__heading">Legale</h2>
+      <h2 class="site-footer__heading">{{ i18n "footer_legal" }}</h2>
       <ul>
-        <li><a href="{{ "/privacy/" | relURL }}">Privacy</a></li>
+        <li><a href="{{ "/privacy/" | relLangURL }}">Privacy</a></li>
       </ul>
     </div>
     <div class="site-footer__col site-footer__contact">
-      <h2 class="site-footer__heading">Contatti</h2>
-      <p><a href="{{ "/contatti/" | relURL }}">Scrivici</a></p>
+      <h2 class="site-footer__heading">{{ i18n "footer_contact" }}</h2>
+      <p><a href="{{ "/contatti/" | relLangURL }}">{{ i18n "footer_write" }}</a></p>
       {{- with .Site.Params.linkedin_site -}}
       <p><a href="{{ . }}" rel="noopener">LinkedIn</a></p>
       {{- end -}}
@@ -31,7 +31,7 @@
   </div>
   <div class="site-footer__bar">
     <div class="container">
-      <p>&copy; {{ $yr }} Committa · Marco Baccarani · P.IVA 03038930354. Tutti i diritti riservati.</p>
+      <p>&copy; {{ $yr }} Committa &middot; Marco Baccarani &middot; {{ if eq .Site.Language.Lang "it" }}P.IVA 03038930354{{ else }}VAT IT03038930354{{ end }}. {{ i18n "footer_rights" }}</p>
     </div>
   </div>
 </footer>

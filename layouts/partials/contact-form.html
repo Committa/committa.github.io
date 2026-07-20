@@ -3,8 +3,8 @@
 <section class="section section--contact" data-reveal>
   <div class="container contact-grid">
     <div class="contact-info">
-      <h2>Contatti</h2>
-      <p class="contact-info__lead">Scrivici per una valutazione gratuita del tuo caso d'uso o del tuo progetto. Ti rispondiamo entro 24 ore lavorative.</p>
+      <h2>{{ i18n "form_heading" }}</h2>
+      <p class="contact-info__lead">{{ i18n "form_lead" }}</p>
       {{- with .Site.Params.linkedin_site -}}
       <dl class="contact-info__list">
         <dt>LinkedIn</dt>
@@ -14,36 +14,36 @@
     </div>
     <form class="contact-form" method="POST" action="{{ $action }}"{{ if $key }} data-web3forms{{ end }}>
       <input type="hidden" name="access_key" value="{{ $key }}">
-      <input type="hidden" name="subject" value="Nuovo contatto da committa.it">
-      <input type="hidden" name="from_name" value="Modulo di contatto Committa">
+      <input type="hidden" name="subject" value="{{ i18n "form_subject" }}">
+      <input type="hidden" name="from_name" value="{{ i18n "form_from_name" }}">
       <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
       <div class="field">
-        <label for="cf-name">Nome <span aria-hidden="true">*</span></label>
+        <label for="cf-name">{{ i18n "form_name_label" }} <span aria-hidden="true">*</span></label>
         <input type="text" id="cf-name" name="name" autocomplete="name" required>
         <p class="field__error" data-error-for="cf-name"></p>
       </div>
       <div class="field">
-        <label for="cf-email">Email aziendale <span aria-hidden="true">*</span></label>
+        <label for="cf-email">{{ i18n "form_email_label" }} <span aria-hidden="true">*</span></label>
         <input type="email" id="cf-email" name="email" autocomplete="email" required>
         <p class="field__error" data-error-for="cf-email"></p>
       </div>
       <div class="field">
-        <label for="cf-reason">Motivo del contatto</label>
+        <label for="cf-reason">{{ i18n "form_reason_label" }}</label>
         <select id="cf-reason" name="reason">
-          <option value="sviluppo-software">Sviluppo software</option>
-          <option value="lira">LIRA</option>
-          <option value="consulenza">Consulenza e formazione</option>
-          <option value="assistenza">Assistenza tecnica</option>
-          <option value="privacy">Privacy</option>
-          <option value="altro">Altro</option>
+          <option value="sviluppo-software">{{ i18n "form_reason_dev" }}</option>
+          <option value="lira">{{ i18n "form_reason_lira" }}</option>
+          <option value="consulenza">{{ i18n "form_reason_consulting" }}</option>
+          <option value="assistenza">{{ i18n "form_reason_support" }}</option>
+          <option value="privacy">{{ i18n "form_reason_privacy" }}</option>
+          <option value="altro">{{ i18n "form_reason_other" }}</option>
         </select>
       </div>
       <div class="field">
-        <label for="cf-msg">Messaggio <span aria-hidden="true">*</span></label>
+        <label for="cf-msg">{{ i18n "form_message_label" }} <span aria-hidden="true">*</span></label>
         <textarea id="cf-msg" name="message" rows="5" required></textarea>
         <p class="field__error" data-error-for="cf-msg"></p>
       </div>
-      <button type="submit" class="btn btn--primary btn--block" data-submit-btn>Invia messaggio</button>
+      <button type="submit" class="btn btn--primary btn--block" data-submit-btn>{{ i18n "form_submit" }}</button>
       <p class="contact-form__status" data-form-status role="status" aria-live="polite"></p>
     </form>
   </div>

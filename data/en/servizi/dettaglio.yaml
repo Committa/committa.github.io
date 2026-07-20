@@ -1,0 +1,29 @@
+- title: "Industrial automation, logistics and artificial intelligence"
+  icon: cpu
+  description: "Software and AI agents for managing and optimizing production, logistics and document processes."
+  list:
+    - "**WMS** (Warehouse Management System) — warehouse management: inventory monitoring, shipment planning, storage optimization, integration with logistics systems."
+    - "**MES** (Manufacturing Execution System) — monitoring and control of production operations, traceability and real-time visibility of industrial activities."
+    - "**HMI** (Human Machine Interface) — intuitive, customized human-machine interfaces for plant control and monitoring."
+    - "**AI agents** — automation of document workflows, decision support and non-conformity management with LLM agents."
+- title: "Systems integration and AI platforms"
+  icon: plug
+  description: "We connect industrial systems and AI platforms, on-premise and hybrid."
+  list:
+    - "Integration between ERP, WMS, MES and HMI systems."
+    - "Connections to industrial devices: PLCs, robots, IoT sensors."
+    - "Integration of LLM models and AI agents into existing operational workflows."
+- title: "Technical support and maintenance"
+  icon: life-buoy
+  description: "Post-implementation support for industrial software and AI solutions, ensuring optimal performance over time."
+  list:
+    - "Technical support and troubleshooting, including remote."
+    - "Diagnosis and resolution of issues on industrial software and AI agents."
+    - "Updates and improvements to adapt systems to new operational requirements."
+- title: "Consulting and training"
+  icon: graduation-cap
+  description: "Process analysis, Industry 4.0 and AI consulting, staff training."
+  list:
+    - "Analysis of business processes to identify automation and AI opportunities."
+    - "Consulting for the adoption of Industry 4.0 technologies and AI solutions."
+    - "Staff training on software tools, LIRA and AI agents."

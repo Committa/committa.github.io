@@ -1,0 +1,32 @@
+- title: "Custom software development"
+  icon: code-2
+  description: "Tailored software from requirements analysis to delivery, with up-to-date technologies and methodologies."
+  list:
+    - "Requirements analysis and discovery with the client"
+    - "Architectural design and stack selection"
+    - "Iterative development with verifiable milestones"
+    - "Post-implementation support and progressive improvements"
+- title: "Database design and management"
+  icon: database
+  description: "Relational, NoSQL and vector databases — designed for your actual workload, not generic benchmarks."
+  list:
+    - "Relational, document and vector data modeling"
+    - "Index, query and execution plan optimization"
+    - "Migrations, backup and disaster recovery"
+    - "Continuous maintenance and performance monitoring"
+- title: "Server infrastructure"
+  icon: server
+  description: "Design, installation and configuration of scalable, reliable server infrastructure, with a DevOps approach."
+  list:
+    - "Hardware sizing and virtualization"
+    - "Network, storage and security configuration"
+    - "CI/CD, containerized deployment and orchestration"
+    - "Hardening, monitoring and recovery procedures"
+- title: "Technical support"
+  icon: life-buoy
+  description: "Dedicated support, emergency troubleshooting and best-practice consulting for operational continuity."
+  list:
+    - "Emergency troubleshooting, including remote"
+    - "Diagnosis and resolution of production incidents"
+    - "Best-practice and operational procedure consulting"
+    - "Updates, patches and improvements to existing software"

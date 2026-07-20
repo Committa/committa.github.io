@@ -1,28 +1,29 @@
 {{ define "main" }}
-{{- $servizi := hugo.Data.servizi.home -}}
-{{- $clienti := hugo.Data.clienti -}}
+{{- $d := index hugo.Data .Site.Language.Lang -}}
+{{- $servizi := index $d "servizi" "home" -}}
+{{- $clienti := index $d "clienti" -}}
 <section class="hero">
   <div class="container hero__inner">
-    <p class="hero__eyebrow">Industria 4.0 · Supply chain · Logistica · IA</p>
-    <h1 class="hero__title">{{ .Params.hero_title | default "Soluzioni software su misura per l'industria 4.0" }}</h1>
-    <p class="hero__lead">{{ .Params.hero_lead | default "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI, per alcune delle più grandi multinazionali del food & beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali." }}</p>
+    <p class="hero__eyebrow">{{ i18n "home_eyebrow" }}</p>
+<h1 class="hero__title">{{ .Site.Params.hero_title | default "Soluzioni software su misura per l'industria 4.0" }}</h1>
+<p class="hero__lead">{{ .Site.Params.hero_lead | default "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI, per alcune delle più grandi multinazionali del food & beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali." }}</p>
     <div class="hero__actions">
-      <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--lg">Contattaci</a>
-      <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost btn--lg">Scopri i servizi</a>
+      <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_contact" }}</a>
+      <a href="{{ "/servizi/" | relLangURL }}" class="btn btn--ghost btn--lg">{{ i18n "cta_discover_services" }}</a>
     </div>
   </div>
 </section>
 
 <section class="section section--tint section--text-center" id="servizi" data-reveal>
   <div class="container">
-    <h2 class="section__title">Servizi</h2>
-    <p class="section__lead">Dallo sviluppo software all'intelligenza artificiale: quattro aree di competenza, un solo interlocutore.</p>
+    <h2 class="section__title">{{ i18n "services_title" }}</h2>
+    <p class="section__lead">{{ i18n "services_lead" }}</p>
     <div class="grid grid--3">
       {{- range $servizi -}}
       {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "link" "/servizi/") }}
       {{- end -}}
     </div>
-    <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost section__cta">Vedi tutti i dettagli
+    <a href="{{ "/servizi/" | relLangURL }}" class="btn btn--ghost section__cta">{{ i18n "services_details_link" }}
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
     </a>
   </div>
@@ -31,22 +32,22 @@
 <section class="section section--accent" id="lira-preview" data-reveal>
   <div class="container lira-preview">
     <div class="lira-preview__text">
-      <p class="lira-preview__eyebrow">Prodotto</p>
-      <h2 class="lira-preview__title">LIRA</h2>
-      <p class="lira-preview__lead">L'IA che risponde con i tuoi documenti, non con internet. On-premise, verificabile, ogni risposta cita le sue fonti.</p>
-      <p class="lira-preview__body">Non l'ennesimo chatbot: una risposta precisa costruita sulle tue fonti, per le tue domande, secondo le tue regole. RAG-U recupera il contesto, LIRA Assistant lo usa per rispondere.</p>
-      <a href="{{ "/lira/" | relURL }}" class="btn btn--primary btn--lg">Scopri LIRA
+      <p class="lira-preview__eyebrow">{{ i18n "lira_eyebrow" }}</p>
+      <h2 class="lira-preview__title">{{ i18n "lira_preview_title" }}</h2>
+      <p class="lira-preview__lead">{{ i18n "lira_preview_lead" }}</p>
+      <p class="lira-preview__body">{{ i18n "lira_preview_body" }}</p>
+      <a href="{{ "/lira/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_discover_lira" }}
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
     <div class="lira-preview__card" aria-hidden="true">
       <div class="lira-preview__card-row">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-        <span>Quali sono gli indirizzi delle aree dati del PLC sulla linea di confezionamento 3?</span>
+        <span>{{ i18n "lira_demo_question" }}</span>
       </div>
       <div class="lira-preview__card-answer">
-        <p>Il PLC della linea di confezionamento 3 utilizza l'area DB50 per i comandi e DB51 per gli stati, con mappatura Modbus a partire dal registro 40001.</p>
-        <p class="lira-preview__cite">— manuale_tecnico_LC3.pdf, § 4.2, p. 27</p>
+        <p>{{ i18n "lira_demo_answer" }}</p>
+        <p class="lira-preview__cite">{{ i18n "lira_demo_cite" }}</p>
       </div>
     </div>
   </div>
@@ -55,9 +56,9 @@
 <section class="section" id="team" data-reveal>
   <div class="container team-breve">
     <div class="team-breve__text">
-      <h2 class="section__title">Il team</h2>
-      <p class="section__lead">Professionisti dell'Industria 4.0, supply chain, logistica e intelligenza artificiale. Sviluppiamo soluzioni end-to-end per il settore food &amp; beverage e oltre — dal requisito al supporto post-implementazione.</p>
-      <a href="{{ "/team/" | relURL }}" class="btn btn--ghost">Scopri il team
+      <h2 class="section__title">{{ i18n "team_title" }}</h2>
+      <p class="section__lead">{{ i18n "team_lead" }}</p>
+      <a href="{{ "/team/" | relLangURL }}" class="btn btn--ghost">{{ i18n "cta_discover_team" }}
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
@@ -67,20 +68,20 @@
 
 <section class="section section--tint section--text-center" id="clienti" data-reveal>
   <div class="container">
-    <h2 class="section__title">Clienti con cui collaboriamo</h2>
-    <p class="section__lead">Una selezione di multinazionali attive nei settori food & beverage, beverage, logistica e oltre.</p>
+    <h2 class="section__title">{{ i18n "clients_title" }}</h2>
+    <p class="section__lead">{{ i18n "clients_lead" }}</p>
     <ul class="clients-list">
       {{- range $clienti -}}
-      <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ end }}">{{ . }}</li>
+      <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ else if eq . "...and many more" }} clients-list__item--muted{{ end }}">{{ . }}</li>
       {{- end -}}
     </ul>
   </div>
 </section>
 
 {{ partial "cta.html" (dict
-  "title" "Parla con noi"
-  "text" "Valutazione gratuita del tuo progetto o del tuo caso d'uso LIRA. Una mail, una risposta entro 24 ore lavorative."
-  "cta" "Contattaci"
+  "title" (i18n "cta_talk_to_us")
+  "text" (i18n "cta_free_eval")
+  "cta" (i18n "cta_contact")
   "url" "/contatti/"
 ) }}
 {{ end }}

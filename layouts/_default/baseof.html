@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "it" }}">
+<html lang="{{ .Site.Language.Lang | default "it" }}">
 <head>
   {{ partial "head.html" . }}
 </head>
 <body>
-  <a class="skip-link" href="#main">Salta al contenuto</a>
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
   {{ partial "header.html" . }}
   <main id="main" tabindex="-1">
     {{ block "main" . }}{{ end }}

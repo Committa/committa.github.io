@@ -1,22 +1,35 @@
 {{- $logoInverted := .Site.Params.logo_inverted | default "images/InvertedLogo.svg" -}}
+{{- $topbarText := .Site.Params.topbar.text | default "" -}}
+{{- $currentLang := .Site.Language.Lang -}}
+{{- $translationURL := "" -}}
+{{- range .Translations -}}{{- $translationURL = .RelPermalink -}}{{- end -}}
 <header class="site-header" id="site-header">
   <div class="topbar">
     <div class="container topbar__inner">
-      <span class="topbar__text">Soluzioni software &amp; IA per l'Industria 4.0</span>
+      <span class="topbar__text">{{ $topbarText | safeHTML }}</span>
+      <nav class="lang-toggle" aria-label="{{ i18n "lang_switch" }}">
+        {{- if eq $currentLang "it" -}}
+        <a href="{{ .RelPermalink }}" class="lang-toggle__btn lang-toggle__btn--active" aria-current="true" hreflang="it" title="Italiano">IT</a>
+        <a href="{{ $translationURL }}" class="lang-toggle__btn" aria-current="false" hreflang="en" title="English">EN</a>
+        {{- else -}}
+        <a href="{{ $translationURL }}" class="lang-toggle__btn" aria-current="false" hreflang="it" title="Italiano">IT</a>
+        <a href="{{ .RelPermalink }}" class="lang-toggle__btn lang-toggle__btn--active" aria-current="true" hreflang="en" title="English">EN</a>
+        {{- end -}}
+      </nav>
     </div>
   </div>
-  <div class="nav" aria-label="Navigazione principale">
+  <div class="nav" aria-label="{{ i18n "nav_aria_label" }}">
     <div class="container nav__inner">
-      <a href="{{ "/" | relURL }}" class="brand" aria-label="Committa — home">
+      <a href="{{ .Site.Home.Permalink | relLangURL }}" class="brand" aria-label="{{ i18n "brand_aria_label" }}">
         <img src="{{ $logoInverted | relURL }}" alt="Committa" class="brand__logo">
       </a>
-      <nav class="nav__menu" id="nav-menu" aria-label="Menu principale">
+      <nav class="nav__menu" id="nav-menu" aria-label="{{ i18n "nav_menu_label" }}">
         {{- range .Site.Menus.main -}}
         <a href="{{ .URL | relURL }}" class="nav__link{{ if $.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
         {{- end -}}
       </nav>
-      <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary nav__cta">Contattaci</a>
-      <button class="nav__toggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-drawer" data-nav-toggle>
+      <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary nav__cta">{{ i18n "cta_contact" }}</a>
+      <button class="nav__toggle" type="button" aria-label="{{ i18n "nav_open" }}" aria-expanded="false" aria-controls="nav-drawer" data-nav-toggle>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18"></path>
         </svg>
@@ -24,12 +37,12 @@
     </div>
   </div>
   <div class="nav-drawer" id="nav-drawer" data-nav-drawer hidden>
-    <nav aria-label="Menu mobile">
+    <nav aria-label="{{ i18n "nav_mobile_label" }}">
       {{- range .Site.Menus.main -}}
       <a href="{{ .URL | relURL }}" class="nav-drawer__link">{{ .Name }}</a>
       {{- end -}}
-      <a href="{{ "/contatti/" | relURL }}" class="btn btn--primary btn--block nav-drawer__cta">Contattaci</a>
+      <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary btn--block nav-drawer__cta">{{ i18n "cta_contact" }}</a>
     </nav>
-    <button class="nav-drawer__backdrop" type="button" aria-label="Chiudi menu" data-nav-close tabindex="-1"></button>
+    <button class="nav-drawer__backdrop" type="button" aria-label="{{ i18n "nav_close" }}" data-nav-close tabindex="-1"></button>
   </div>
 </header>

@@ -3,6 +3,7 @@ title = 'Privacy Policy'
 description = "Informativa sul trattamento dei dati personali del sito committa.it. Titolare, dati raccolti, diritti dell'interessato."
 eyebrow = "Legale"
 weight = 6
+translationKey = "privacy"
 +++
 
 *Ultimo aggiornamento: 20/07/2026*

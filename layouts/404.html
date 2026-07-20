@@ -2,11 +2,11 @@
 <section class="section section--centered not-found">
   <div class="container container--narrow">
     <p class="not-found__code">404</p>
-    <h1 class="page-header__title">Pagina non trovata</h1>
-    <p class="page-header__lead">La pagina che cercavi non esiste o è stata spostata.</p>
+    <h1 class="page-header__title">{{ i18n "page_not_found" }}</h1>
+    <p class="page-header__lead">{{ i18n "page_not_found_lead" }}</p>
     <div class="hero__actions">
-      <a href="{{ "/" | relURL }}" class="btn btn--primary btn--lg">Torna alla home</a>
-      <a href="{{ "/servizi/" | relURL }}" class="btn btn--ghost btn--lg">Vai ai servizi</a>
+      <a href="{{ "/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_back_home" }}</a>
+      <a href="{{ "/servizi/" | relLangURL }}" class="btn btn--ghost btn--lg">{{ i18n "cta_go_services" }}</a>
     </div>
   </div>
 </section>

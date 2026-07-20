@@ -1,0 +1,20 @@
+heading: "Artificial intelligence solutions"
+lead: "In addition to traditional development services, we design and build custom AI solutions: LLM agents, on-premise RAG, process automation — all integrated with your systems, without giving away data to third parties."
+cards:
+  - title: "AI agents for process automation"
+    icon: sparkles
+    description: "We design and develop LLM-based agents that automate complex workflows: from document processing to non-conformity management, to decision support in production."
+    list:
+      - "Process analysis and identification of AI automation opportunities"
+      - "Development of LLM agents integrated with your systems (ERP, WMS, MES)"
+      - "Agents with tool use: AI doesn't just answer, it performs actions on your data"
+      - "On-premise deployment, without sending data to third-party cloud services"
+  - title: "LIRA — The AI that knows your documents"
+    icon: cpu
+    description: "Our on-premise RAG product: precise answers built on your documents, not the internet. Perfect for technical manuals, contracts, procedures and regulatory archives."
+    list:
+      - "Verifiable answers with precise source citations"
+      - "Indexing of PDFs, docx, images and technical documents"
+      - "Fully on-premise, no data sent outside"
+      - "OpenAI-compatible API and MCP server to integrate into your tools"
+    link: "/en/lira/"

@@ -1,0 +1,331 @@
+# i18n/en.toml — English UI strings
+
+[skip_to_content]
+other = "Skip to content"
+
+[home_eyebrow]
+other = "Industry 4.0 · Supply chain · Logistics · AI"
+
+[cta_contact]
+other = "Contact us"
+
+[cta_discover_services]
+other = "Discover our services"
+
+[services_title]
+other = "Services"
+
+[services_lead]
+other = "From software development to artificial intelligence: four areas of expertise, a single point of contact."
+
+[services_details_link]
+other = "See all details"
+
+[lira_eyebrow]
+other = "Product"
+
+[lira_preview_title]
+other = "LIRA"
+
+[lira_preview_lead]
+other = "The AI that answers with your documents, not the internet. On-premise, verifiable, every answer cites its sources."
+
+[lira_preview_body]
+other = "Not just another chatbot: a precise answer built on your sources, for your questions, by your rules. RAG-U retrieves the context, LIRA Assistant uses it to respond."
+
+[cta_discover_lira]
+other = "Discover LIRA"
+
+[team_title]
+other = "The team"
+
+[team_lead]
+other = "Industry 4.0, supply chain, logistics and artificial intelligence professionals. We develop end-to-end solutions for the food & beverage sector and beyond — from requirements to post-implementation support."
+
+[cta_discover_team]
+other = "Meet the team"
+
+[clients_title]
+other = "Clients we work with"
+
+[clients_lead]
+other = "A selection of multinationals active in the food & beverage, logistics and beyond sectors."
+
+[cta_talk_to_us]
+other = "Talk to us"
+
+[cta_free_eval]
+other = "Free assessment of your project or LIRA use case. One email, a reply within 24 business hours."
+
+[nav_aria_label]
+other = "Main navigation"
+
+[nav_menu_label]
+other = "Main menu"
+
+[nav_mobile_label]
+other = "Mobile menu"
+
+[brand_aria_label]
+other = "Committa — home"
+
+[nav_open]
+other = "Open menu"
+
+[nav_close]
+other = "Close menu"
+
+[footer_nav]
+other = "Navigation"
+
+[footer_legal]
+other = "Legal"
+
+[footer_contact]
+other = "Contact"
+
+[footer_write]
+other = "Write to us"
+
+[footer_rights]
+other = "All rights reserved."
+
+[footer_copyright]
+other = "© %s Committa · Marco Baccarani · VAT IT03038930354. %s"
+
+[page_not_found]
+other = "Page not found"
+
+[page_not_found_lead]
+other = "The page you were looking for does not exist or has been moved."
+
+[cta_back_home]
+other = "Back to home"
+
+[cta_go_services]
+other = "Go to services"
+
+[servizi_hero_title]
+other = "Industrial expertise and artificial intelligence, a single point of contact."
+
+[servizi_hero_lead]
+other = "Software development, databases, infrastructure and support &mdash; from requirements to post-implementation support, for some of the largest food &amp; beverage multinationals and beyond. And AI solutions: LLM agents and on-premise RAG to automate business processes."
+
+[servizi_four_title]
+other = "The four services"
+
+[servizi_four_lead]
+other = "From analysis to maintenance, through artificial intelligence: each service covers a piece of the software lifecycle, and combines with the others without handoff gaps."
+
+[servizi_apply_title]
+other = "How we apply these skills"
+
+[servizi_apply_lead]
+other = "Alongside commercial services, we operate in macro-areas covering the entire software lifecycle — from industrial automation to artificial intelligence."
+
+[servizi_cta_title]
+other = "Tell us about your project"
+
+[servizi_cta_text]
+other = "Free assessment of your use case, operational context and compatibility with your existing systems. One email, a reply within 24 business hours."
+
+[team_hero_title]
+other = "The team"
+
+[team_hero_lead]
+other = "Software developers specialized in Industry 4.0, supply chain and logistics. We work with food &amp; beverage multinationals and beyond, delivering end-to-end solutions &mdash; from requirements to post-implementation support."
+
+[team_years_experience_one]
+other = "year of experience"
+
+[team_years_experience_other]
+other = "years of experience"
+
+[team_cta_title]
+other = "Let's work together"
+
+[team_cta_text]
+other = "Free assessment of your project or use case. One email, a reply within 24 business hours."
+
+[lira_hero_title]
+other = "LIRA &mdash; The AI that knows your documents."
+
+[lira_hero_lead]
+other = "Precise, verified answers with source citations &mdash; directly from your documents. No data sent outside: everything on-premise."
+
+[lira_demo_cta]
+other = "Request a demo"
+
+[lira_how_cta]
+other = "How it works"
+
+[lira_trust_onpremise]
+other = "100% on-premise"
+
+[lira_trust_gdpr]
+other = "GDPR-ready"
+
+[lira_trust_no_third_party]
+other = "No third-party data"
+
+[lira_made_for_you_title]
+other = "Made for you, not for everyone."
+
+[lira_made_for_you_lead]
+other = "Generic AIs are powerful but have a structural limitation: <em>they don't know your company</em>. They don't know what's in your contracts, your technical manuals, the protocols you've been using for twenty years. So they generalize. They make up answers. You need facts, not fantasy."
+
+[lira_made_for_you_body]
+other = "LIRA is not a pre-packaged platform to adapt to you. <strong>It's the opposite</strong>: the platform molds itself to you. The results are <em>qualitatively superior</em> to any out-of-the-box solution, for a simple reason: <strong>they start from the internet, we start from your documents.</strong>"
+
+[lira_how_title]
+other = "How it works"
+
+[lira_step1_title]
+other = "Connect your sources"
+
+[lira_step1_text]
+other = "LIRA integrates with your systems via native connectors (filesystem, cloud storage, database, FTP, SharePoint) and custom connectors for proprietary databases. It automatically monitors your sources: every new document and every change is detected and processed without manual intervention."
+
+[lira_step2_title]
+other = "Auto-index"
+
+[lira_step2_text]
+other = "Every added or modified document is indexed without manual operations. Semantic embeddings, keywords, images: everything on-premise, always up to date."
+
+[lira_step3_title]
+other = "Ask and receive"
+
+[lira_step3_text]
+other = "Ask a question in natural language. LIRA retrieves the relevant passages and generates an answer with precise source citation."
+
+[lira_pillars_heading]
+other = "Four pillars that make the difference"
+
+[lira_architecture_title]
+other = "Behind the scenes: the two-phase architecture"
+
+[lira_architecture_lead]
+other = "The product's core is a <abbr title=\"Retrieval-Augmented Generation\">RAG</abbr> system: given the user's question, it retrieves relevant passages from your documents and provides them to the LLM as context to generate an answer grounded in those passages — not in the model's memory."
+
+[lira_ragu_title]
+other = "RAG-U &mdash; the retrieval engine"
+
+[lira_ragu_desc]
+other = "RAG-U is the ingestion, indexing and retrieval pipeline that feeds the LLM with context extracted from your documents."
+
+[lira_ragu_step1]
+other = "<strong>Ingestion</strong> — reads your documents (.docx, PDF, mixed formats), extracts text, tables and images, splits into meaningful chunks."
+
+[lira_ragu_step2]
+other = "<strong>Indexing</strong> — transforms each chunk into semantic vectors + BM25 keyword index, inside an on-premise vector store."
+
+[lira_ragu_step3]
+other = "<strong>Retrieval</strong> — given the user's question, retrieves the most relevant passages by combining semantic and keyword search, reranks them, reconstructs section context."
+
+[lira_ragu_step4]
+other = "<strong>Image indexing</strong> — a parallel worker generates text captions for images and indexes them semantically alongside the text."
+
+[lira_assistant_title]
+other = "LIRA Assistant &mdash; the conversational interface"
+
+[lira_assistant_desc]
+other = "On top of RAG-U runs <strong>LIRA Assistant</strong>, the interface users actually interact with: a chat that responds in natural language, cites sources, and can be branded and integrated into your workflows."
+
+[lira_assistant_feat1]
+other = "OpenAI-compatible API → integrates with any tool or framework that already uses the OpenAI Chat Completions API"
+
+[lira_assistant_feat2]
+other = "MCP <abbr title=\"Model Context Protocol\">server</abbr> → exposes retrieval as a tool to MCP clients and external AI agents"
+
+[lira_punchline]
+other = "In summary: <strong>RAG-U retrieves the context, LIRA Assistant uses it to respond.</strong>"
+
+[lira_comparison_heading]
+other = "Where it makes a difference, concretely"
+
+[lira_for_whom_title]
+other = "Who it's for"
+
+[lira_what_you_get_title]
+other = "What you get"
+
+[lira_manifesto_quote]
+other = "Stop searching. Ask LIRA."
+
+[lira_manifesto_sig]
+other = "Your enterprise AI."
+
+[lira_cta_title]
+other = "Free assessment and demo on your sample"
+
+[lira_cta_text]
+other = "Send me a sample of your documentation: I'll show you LIRA on your documents, not on a generic benchmark."
+
+[lira_cta_button]
+other = "Book a demo"
+
+[compare_scenario]
+other = "Scenario"
+
+[compare_generic]
+other = "Generic online chatbot"
+
+[card_detail]
+other = "Learn more"
+
+[form_heading]
+other = "Contact"
+
+[form_lead]
+other = "Write to us for a free assessment of your use case or project. We respond within 24 business hours."
+
+[form_name_label]
+other = "Name"
+
+[form_email_label]
+other = "Business email"
+
+[form_reason_label]
+other = "Reason for contact"
+
+[form_reason_dev]
+other = "Software development"
+
+[form_reason_lira]
+other = "LIRA"
+
+[form_reason_consulting]
+other = "Consulting and training"
+
+[form_reason_support]
+other = "Technical support"
+
+[form_reason_privacy]
+other = "Privacy"
+
+[form_reason_other]
+other = "Other"
+
+[form_message_label]
+other = "Message"
+
+[form_submit]
+other = "Send message"
+
+[form_subject]
+other = "New contact from committa.it"
+
+[lang_switch]
+other = "Switch language"
+
+[form_from_name]
+other = "Committa contact form"
+
+[lira_demo_question]
+other = "What are the PLC data area addresses on packaging line 3?"
+
+[lira_demo_answer]
+other = "The PLC on packaging line 3 uses DB50 for commands and DB51 for states, with Modbus mapping starting at register 40001."
+
+[lira_demo_cite]
+other = "— technical_manual_LC3.pdf, § 4.2, p. 27"

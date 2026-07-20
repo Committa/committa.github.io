@@ -298,6 +298,7 @@
   font-size: var(--fs-300);
 }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; min-height: 40px; }
+.topbar__text { line-height: 1; }
 .topbar__text a { color: var(--color-on-hero); text-decoration: underline dotted rgba(255,255,255,0.4); }
 .topbar__text a:hover { color: var(--color-on-hero); text-decoration: underline; }
 

@@ -44,7 +44,7 @@ disableKinds = ['taxonomy', 'term']
 
   [languages.it.params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Soluzioni software &amp; IA per l'Industria 4.0</p>"""
+    text = "Soluzioni software &amp; IA per l'Industria 4.0"
 
   [languages.it.params.widgets]
     categories = false
@@ -122,7 +122,7 @@ disableKinds = ['taxonomy', 'term']
 
   [languages.en.params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Software &amp; AI solutions for Industry 4.0</p>"""
+    text = "Software &amp; AI solutions for Industry 4.0"
 
   [languages.en.params.widgets]
     categories = false

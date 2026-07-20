@@ -1,0 +1,49 @@
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+{{- $css2 := resources.Get "css/components.css" | minify | fingerprint -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="dark">
+<title>{{ if .IsHome }}{{ .Title | default .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+{{- with .Description | default .Site.Params.defaultDescription }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- with .Site.Params.defaultKeywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="sitemap" href="{{ "sitemap.xml" | absURL }}">
+
+{{- /* Open Graph */ -}}
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.defaultDescription }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.Language.Lang | default "it" }}_{{ .Site.Language.Lang | default "IT" | upper }}">
+<meta property="og:image" content="{{ "images/MainLogo.png" | absURL }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ .Description | default .Site.Params.defaultDescription }}">
+
+{{- /* Favicon */ -}}
+<link rel="icon" type="image/svg+xml" href="{{ "images/Symbol.svg" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/Symbol.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "images/Symbol.png" | absURL }}">
+
+{{- /* Browser language detection */ -}}
+<script>
+(function(){var s=localStorage.getItem('lang');if(s)return;var l=navigator.language||navigator.userLanguage||'';var p=window.location.pathname;var onEn=p.indexOf('/en/')===0;if(!l||l.indexOf('it')!==0){if(!onEn){var t=p.replace(/^\//,'');window.location.href='/en/'+(t||'');}}})();
+</script>
+
+{{- /* Fonts */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap">
+
+{{- /* Stylesheets */ -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="{{ $css2.RelPermalink }}">

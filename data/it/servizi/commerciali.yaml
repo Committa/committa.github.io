@@ -1,0 +1,32 @@
+- title: "Sviluppo software personalizzato"
+  icon: code-2
+  description: "Software su misura dall'analisi dei requisiti alla consegna, con tecnologie e metodologie aggiornate."
+  list:
+    - "Analisi dei requisiti e discovery con il cliente"
+    - "Progettazione architetturale e scelta dello stack"
+    - "Sviluppo iterativo con milestone verificabili"
+    - "Supporto post-implementazione e miglioramenti progressivi"
+- title: "Progettazione e gestione database"
+  icon: database
+  description: "Database relazionali, NoSQL e vettoriali — progettati per il tuo carico reale, non per benchmark generici."
+  list:
+    - "Modellazione dati relazionale, documentale e vettoriale"
+    - "Ottimizzazione di indici, query e piani di esecuzione"
+    - "Migrazioni, backup e disaster recovery"
+    - "Manutenzione continua e monitoraggio delle prestazioni"
+- title: "Infrastrutture server"
+  icon: server
+  description: "Progettazione, installazione e configurazione di infrastrutture server scalabili e affidabili, con approccio DevOps."
+  list:
+    - "Dimensionamento hardware e virtualizzazione"
+    - "Configurazione di rete, storage e sicurezza"
+    - "CI/CD, deployment containerizzato e orchestrazione"
+    - "Hardening, monitoring e procedure di ripristino"
+- title: "Assistenza tecnica"
+  icon: life-buoy
+  description: "Supporto dedicato, troubleshooting di emergenza e consulenza su best practice per la continuità operativa."
+  list:
+    - "Troubleshooting di emergenza, anche da remoto"
+    - "Diagnosi e risoluzione di incidenti di produzione"
+    - "Consulenza su best practice e procedure operative"
+    - "Aggiornamenti, patch e miglioramenti ai software esistenti"

@@ -1,0 +1,12 @@
+- title: "Custom software development"
+  icon: code-2
+  description: "Tailored software from requirements analysis to post-implementation support, using up-to-date technologies and methodologies."
+- title: "Database design and management"
+  icon: database
+  description: "Relational, NoSQL and vector databases: design, implementation and maintenance. Stable, secure and performant."
+- title: "Server infrastructure"
+  icon: server
+  description: "Design, installation and configuration of scalable server infrastructure, with DevOps practices for deployment and automation."
+- title: "Technical support"
+  icon: life-buoy
+  description: "Dedicated support, emergency troubleshooting and best-practice consulting to ensure operational continuity."

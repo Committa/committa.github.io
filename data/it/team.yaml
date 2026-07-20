@@ -1,0 +1,33 @@
+# Team Committa — array di membri. Per aggiungere una persona basta
+# appendere un nuovo oggetto qui sotto; il layout si adatta automaticamente
+# (griglia di schede con più di un membro, scheda espansa con uno solo).
+
+approach:
+  heading: "Il nostro approccio"
+  lead: "Esperienza e profonda comprensione delle dinamiche del settore industriale e logistico: professionisti altamente qualificati e affidabili, impegnati a offrire servizi di alta qualità con dedizione costante all'innovazione."
+  values:
+    - icon: "shield"
+      title: "Qualità senza compromessi"
+      description: "Dedizione costante all'innovazione e collaborazione stretta con il cliente per garantire il successo dei progetti."
+    - icon: "settings"
+      title: "Soluzioni su misura"
+      description: "Risposte specifiche per ogni esigenza, indipendentemente dalla complessità o dalla portata del progetto."
+    - icon: "life-buoy"
+      title: "Partner tecnologico affidabile"
+      description: "Comprensione profonda delle sfide del settore, capacità di tradurle in soluzioni concrete e misurabili."
+    - icon: "sparkles"
+      title: "Innovazione costante"
+      description: "Aggiornamento continuo sulle tecnologie dell'Industria 4.0 e adozione delle metodologie più efficaci."
+
+members:
+  - name: "Marco Baccarani"
+    role: "Founder & Software Developer"
+    avatar: "images/team/marco.svg"
+    started_year: 2007
+    started_month: 9
+    intro:
+      heading: "Un percorso internazionale"
+      paragraphs:
+        - "Marco Baccarani è uno sviluppatore software con una lunga carriera nel settore dell'Industria 4.0, della gestione della supply chain e della logistica."
+        - "Il suo percorso professionale è stato arricchito da un'esperienza internazionale, durante la quale ha viaggiato per il mondo e ha avuto l'opportunità di confrontarsi con realtà diverse e sfide sempre in evoluzione."
+        - "Durante questo percorso, Marco ha contribuito allo sviluppo e all'implementazione di impianti e sistemi software complessi, fornendo soluzioni innovative e personalizzate per soddisfare le esigenze specifiche di ciascun cliente."

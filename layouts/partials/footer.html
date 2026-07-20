@@ -1,0 +1,37 @@
+{{- $year := now.Format "2006" -}}
+{{- $foundation := .Site.Params.foundation_year | default $year -}}
+{{- $yr := cond (eq (printf "%v" $foundation) $year) $year (printf "%v–%s" $foundation $year) -}}
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__col site-footer__brand">
+      <img src="{{ "images/InvertedLogo.svg" | relURL }}" alt="Committa" class="site-footer__logo" width="180" height="38">
+      <p class="site-footer__tagline">{{ .Site.Params.about_us | plainify }}</p>
+    </div>
+    <nav class="site-footer__col site-footer__nav" aria-label="Footer">
+      <h2 class="site-footer__heading">{{ i18n "footer_nav" }}</h2>
+      <ul>
+        {{- range .Site.Menus.main -}}
+        <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+        {{- end -}}
+      </ul>
+    </nav>
+    <div class="site-footer__col site-footer__legal">
+      <h2 class="site-footer__heading">{{ i18n "footer_legal" }}</h2>
+      <ul>
+        <li><a href="{{ "/privacy/" | relLangURL }}">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col site-footer__contact">
+      <h2 class="site-footer__heading">{{ i18n "footer_contact" }}</h2>
+      <p><a href="{{ "/contatti/" | relLangURL }}">{{ i18n "footer_write" }}</a></p>
+      {{- with .Site.Params.linkedin_site -}}
+      <p><a href="{{ . }}" rel="noopener">LinkedIn</a></p>
+      {{- end -}}
+    </div>
+  </div>
+  <div class="site-footer__bar">
+    <div class="container">
+      <p>&copy; {{ $yr }} Committa &middot; Marco Baccarani &middot; {{ if eq .Site.Language.Lang "it" }}P.IVA 03038930354{{ else }}VAT IT03038930354{{ end }}. {{ i18n "footer_rights" }}</p>
+    </div>
+  </div>
+</footer>

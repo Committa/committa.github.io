@@ -1,0 +1,90 @@
+{{ define "main" }}
+{{- $d := index hugo.Data .Site.Language.Lang -}}
+{{- $servizi := index $d "servizi" "home" -}}
+{{- $clienti := index $d "clienti" -}}
+<section class="hero">
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">{{ i18n "home_eyebrow" }}</p>
+<h1 class="hero__title">{{ .Site.Params.hero_title | default "Soluzioni software su misura per l'industria 4.0" }}</h1>
+<p class="hero__lead">{{ .Site.Params.hero_lead | default "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI, per alcune delle più grandi multinazionali del food & beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali." }}</p>
+    <div class="hero__actions">
+      <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_contact" }}</a>
+      <a href="{{ "/servizi/" | relLangURL }}" class="btn btn--ghost btn--lg">{{ i18n "cta_discover_services" }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint section--text-center" id="servizi" data-reveal>
+  <div class="container">
+    <h2 class="section__title">{{ i18n "services_title" }}</h2>
+    <p class="section__lead">{{ i18n "services_lead" }}</p>
+    <div class="grid grid--3">
+      {{- range $servizi -}}
+      {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "link" "/servizi/") }}
+      {{- end -}}
+    </div>
+    <a href="{{ "/servizi/" | relLangURL }}" class="btn btn--ghost section__cta">{{ i18n "services_details_link" }}
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+    </a>
+  </div>
+</section>
+
+<section class="section section--accent" id="lira-preview" data-reveal>
+  <div class="container lira-preview">
+    <div class="lira-preview__text">
+      <p class="lira-preview__eyebrow">{{ i18n "lira_eyebrow" }}</p>
+      <h2 class="lira-preview__title">{{ i18n "lira_preview_title" }}</h2>
+      <p class="lira-preview__lead">{{ i18n "lira_preview_lead" }}</p>
+      <p class="lira-preview__body">{{ i18n "lira_preview_body" }}</p>
+      <a href="{{ "/lira/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_discover_lira" }}
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+    <div class="lira-preview__card" aria-hidden="true">
+      <div class="lira-preview__card-row">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>{{ i18n "lira_demo_question" }}</span>
+      </div>
+      <div class="lira-preview__card-answer">
+        <p>{{ i18n "lira_demo_answer" }}</p>
+        <p class="lira-preview__cite">{{ i18n "lira_demo_cite" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team" data-reveal>
+  <div class="container team-breve">
+    <div class="team-breve__text">
+      <h2 class="section__title">{{ i18n "team_title" }}</h2>
+      <p class="section__lead">{{ i18n "team_lead" }}</p>
+      <a href="{{ "/team/" | relLangURL }}" class="btn btn--ghost">{{ i18n "cta_discover_team" }}
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<section class="section section--tint section--text-center" id="partner" data-reveal>
+  <div class="container">
+    <h2 class="section__title">{{ i18n "partner_title" }}</h2>
+    {{- with $clienti -}}
+    <div class="partner-block">
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="partner-block__logo" width="200" height="56" loading="lazy" />
+      <p class="partner-block__name">{{ .name }}</p>
+      {{- with .description -}}
+      <p class="partner-block__desc">{{ . }}</p>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
+</section>
+
+{{ partial "cta.html" (dict
+  "title" (i18n "cta_talk_to_us")
+  "text" (i18n "cta_free_eval")
+  "cta" (i18n "cta_contact")
+  "url" "/contatti/"
+) }}
+{{ end }}

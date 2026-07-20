@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="content-page">
+  <header class="page-header">
+    <div class="container">
+      {{- with .Params.eyebrow -}}<p class="hero__eyebrow">{{ . }}</p>{{- end -}}
+      <h1 class="page-header__title">{{ .Title }}</h1>
+      {{- with .Params.lead -}}<p class="page-header__lead">{{ . }}</p>{{- end -}}
+    </div>
+  </header>
+  {{- if eq .File.ContentBaseName "contatti" -}}
+    {{ partial "contact-form.html" . }}
+  {{- else -}}
+    <div class="container content-page__body">
+      {{ .Content }}
+    </div>
+  {{- end -}}
+</article>
+{{ end }}

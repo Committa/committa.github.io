@@ -1,0 +1,13 @@
+{{- $items := .items -}}
+{{- $modifier := .modifier | default "default" -}}
+<section class="section section--pills{{ with $modifier }} section--{{ . }}{{ end }}" data-reveal>
+  <div class="container">
+    {{- with .heading -}}<h2 class="section__title">{{ . }}</h2>{{- end -}}
+    {{- with .lead -}}<p class="section__lead">{{ . }}</p>{{- end -}}
+    <div class="grid grid--{{ .cols | default 3 }}">
+      {{- range $items -}}
+      {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list "link" .link) }}
+      {{- end -}}
+    </div>
+  </div>
+</section>

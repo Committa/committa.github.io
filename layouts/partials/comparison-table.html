@@ -1,0 +1,26 @@
+<section class="section section--compare" data-reveal>
+  <div class="container">
+    {{- with .heading -}}<h2 class="section__title">{{ . }}</h2>{{- end -}}
+    {{- with .lead -}}<p class="section__lead">{{ . }}</p>{{- end -}}
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">{{ i18n "compare_scenario" }}</th>
+            <th scope="col">{{ i18n "compare_generic" }}</th>
+            <th scope="col" class="compare-table__winner">LIRA</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{- range .items -}}
+          <tr>
+            <th scope="row">{{ .scenario }}</th>
+            <td>{{ .generica }}</td>
+            <td>{{ .lira }}</td>
+          </tr>
+          {{- end -}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

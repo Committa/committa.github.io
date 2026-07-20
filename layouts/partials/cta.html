@@ -1,0 +1,19 @@
+{{- $title := .title | default (i18n "cta_talk_to_us") -}}
+{{- $cta := .cta | default (i18n "cta_contact") -}}
+{{- $url := .url | default "/contatti/" -}}
+{{- $secondary := .secondary -}}
+{{- $secondaryUrl := .secondaryUrl | default "/contatti/" -}}
+<section class="cta-band" data-reveal>
+  <div class="container cta-band__inner">
+    <div class="cta-band__text">
+      <h2>{{ $title }}</h2>
+      {{- with .text -}}<p>{{ . }}</p>{{- end -}}
+    </div>
+    <div class="cta-band__actions">
+      <a href="{{ $url | relLangURL }}" class="btn btn--primary btn--lg">{{ $cta }}</a>
+      {{- if $secondary -}}
+      <a href="{{ $secondaryUrl | relLangURL }}" class="btn btn--ghost btn--lg">{{ $secondary }}</a>
+      {{- end -}}
+    </div>
+  </div>
+</section>

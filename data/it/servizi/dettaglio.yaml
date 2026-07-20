@@ -1,0 +1,29 @@
+- title: "Automazione industriale, logistica e intelligenza artificiale"
+  icon: cpu
+  description: "Software e agenti IA per la gestione e l'ottimizzazione dei processi produttivi, logistici e documentali."
+  list:
+    - "**WMS** (Warehouse Management System) — gestione del magazzino: monitoraggio scorte, pianificazione spedizioni, ottimizzazione dello stoccaggio, integrazione con sistemi logistici."
+    - "**MES** (Manufacturing Execution System) — monitoraggio e controllo delle operazioni produttive, tracciabilità e visibilità in tempo reale delle attività industriali."
+    - "**HMI** (Human Machine Interface) — interfacce uomo-macchina intuitive e personalizzate per il controllo e il monitoraggio degli impianti."
+    - "**Agenti IA** — automazione di workflow documentali, supporto decisionale e gestione delle non conformità con agenti LLM."
+- title: "Integrazione tra sistemi e piattaforme IA"
+  icon: plug
+  description: "Colleghiamo sistemi industriali e piattaforme di intelligenza artificiale, on-premise e ibride."
+  list:
+    - "Integrazione tra sistemi ERP, WMS, MES e HMI."
+    - "Connessioni a dispositivi industriali: PLC, robot, sensori IoT."
+    - "Integrazione di modelli LLM e agenti IA nei flussi operativi esistenti."
+- title: "Assistenza tecnica e manutenzione"
+  icon: life-buoy
+  description: "Supporto post-implementazione per software industriali e soluzioni IA, garantendo funzionamento ottimale nel tempo."
+  list:
+    - "Supporto tecnico e troubleshooting, anche da remoto."
+    - "Diagnosi e risoluzione di problemi su software industriale e agenti IA."
+    - "Aggiornamenti e miglioramenti per adeguare i sistemi a nuove esigenze operative."
+- title: "Consulenza e formazione"
+  icon: graduation-cap
+  description: "Analisi dei processi, consulenza su Industria 4.0 e intelligenza artificiale, formazione del personale."
+  list:
+    - "Analisi dei processi aziendali per identificare opportunità di automazione e IA."
+    - "Consulenza per l'adozione di tecnologie Industria 4.0 e soluzioni di intelligenza artificiale."
+    - "Formazione del personale su strumenti software, LIRA e agenti IA."

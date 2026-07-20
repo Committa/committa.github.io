@@ -1,0 +1,7 @@
+- "RAG-U, la pipeline di retrieval-augmented generation in deployment on-premise o ibrido"
+- "LIRA Assistant, l'interfaccia conversazionale con cui interagiscono i tuoi utenti, brandizzabile"
+- "API compatibile OpenAI → si integra con qualsiasi tool o framework che già usa l'API Chat Completions di OpenAI"
+- "Server MCP → espone la retrieval come strumento a client MCP e agenti IA esterni (orchestrazione, multi-step, automazione)"
+- "Connettori per alimentazione continua dei contenuti (filesystem, condivisioni SMB, altro su richiesta)"
+- "Indicizzazione multimodale di testo, tabelle e immagini"
+- "Formazione del team e supporto engineering dedicato"

@@ -1,0 +1,33 @@
+# Committa Team — array of members. To add a person, simply
+# append a new object below; the layout adapts automatically
+# (card grid with multiple members, expanded card with one).
+
+approach:
+  heading: "Our approach"
+  lead: "Experience and deep understanding of industrial and logistics sector dynamics: highly qualified and reliable professionals, committed to delivering high-quality services with constant dedication to innovation."
+  values:
+    - icon: "shield"
+      title: "Uncompromising quality"
+      description: "Constant dedication to innovation and close collaboration with the client to ensure project success."
+    - icon: "settings"
+      title: "Tailored solutions"
+      description: "Specific answers for every need, regardless of project complexity or scope."
+    - icon: "life-buoy"
+      title: "Reliable technology partner"
+      description: "Deep understanding of sector challenges, ability to translate them into concrete and measurable solutions."
+    - icon: "sparkles"
+      title: "Constant innovation"
+      description: "Continuous updating on Industry 4.0 technologies and adoption of the most effective methodologies."
+
+members:
+  - name: "Marco Baccarani"
+    role: "Founder & Software Developer"
+    avatar: "images/team/marco.svg"
+    started_year: 2007
+    started_month: 9
+    intro:
+      heading: "An international journey"
+      paragraphs:
+        - "Marco Baccarani is a software developer with a long career in Industry 4.0, supply chain management and logistics."
+        - "His professional journey has been enriched by international experience, during which he traveled the world and had the opportunity to engage with diverse realities and ever-evolving challenges."
+        - "Throughout this journey, Marco has contributed to the development and implementation of complex plants and software systems, providing innovative and customized solutions to meet each client's specific needs."

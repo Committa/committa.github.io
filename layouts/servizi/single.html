@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{- $d := index hugo.Data .Site.Language.Lang -}}
+{{- $commerciali := index $d "servizi" "commerciali" -}}
+{{- $dettaglio := index $d "servizi" "dettaglio" -}}
+{{- $ai := index $d "servizi" "ai" -}}
+<article class="content-page servizi-page">
+  <header class="hero hero--compact hero--dark">
+    <div class="container">
+      <p class="hero__eyebrow">{{ i18n "services_title" }}</p>
+      <h1 class="hero__title">{{ i18n "servizi_hero_title" }}</h1>
+      <p class="hero__lead">{{ i18n "servizi_hero_lead" }}</p>
+      <div class="hero__actions">
+        <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_contact" }}</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--text-center" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ i18n "servizi_four_title" }}</h2>
+      <p class="section__lead">{{ i18n "servizi_four_lead" }}</p>
+      <div class="grid grid--2">
+        {{- range $commerciali -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint section--text-center" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ i18n "servizi_apply_title" }}</h2>
+      <p class="section__lead">{{ i18n "servizi_apply_lead" }}</p>
+      <div class="grid grid--2">
+        {{- range $dettaglio -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  {{- with $ai -}}
+  <section class="section section--accent section--text-center" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ .heading }}</h2>
+      <p class="section__lead">{{ .lead }}</p>
+      <div class="grid grid--2">
+        {{- range .cards -}}
+        {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list "link" .link) }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+  {{- end -}}
+
+  {{ partial "cta.html" (dict
+    "title" (i18n "servizi_cta_title")
+    "text" (i18n "servizi_cta_text")
+    "cta" (i18n "cta_contact")
+    "url" "/contatti/"
+  ) }}
+</article>
+{{ end }}

@@ -1,0 +1,157 @@
+{{ define "main" }}
+{{- $d := index hugo.Data .Site.Language.Lang -}}
+{{- $pilastri := index $d "lira" "pilastri" -}}
+{{- $confronto := index $d "lira" "confronto" -}}
+{{- $perChi := index $d "lira" "per_chi" -}}
+{{- $cosaRicevi := index $d "lira" "cosa_ricevi" -}}
+<article class="content-page lira-page">
+  <header class="hero hero--compact hero--dark">
+    <div class="container">
+      <p class="hero__eyebrow">LIRA · Libreria di Informazioni e Risorse Aziendali</p>
+      <h1 class="hero__title">{{ i18n "lira_hero_title" }}</h1>
+      <p class="hero__lead">{{ i18n "lira_hero_lead" }}</p>
+      <div class="hero__actions">
+        <a href="{{ "/contatti/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "lira_demo_cta" }}</a>
+        <a href="#come-funziona" class="btn btn--ghost btn--lg">{{ i18n "lira_how_cta" }}</a>
+      </div>
+      <div class="hero__demo">
+        <div class="lira-preview__card" aria-hidden="true">
+          <div class="lira-preview__card-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>{{ i18n "lira_demo_question" }}</span>
+          </div>
+          <div class="lira-preview__card-answer">
+            <p>{{ i18n "lira_demo_answer" }}</p>
+            <p class="lira-preview__cite">{{ i18n "lira_demo_cite" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--tint" data-reveal>
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+          <span>{{ i18n "lira_trust_onpremise" }}</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <span>{{ i18n "lira_trust_gdpr" }}</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+          <span>{{ i18n "lira_trust_no_third_party" }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container container--narrow">
+      <h2 class="section__title">{{ i18n "lira_made_for_you_title" }}</h2>
+      <p class="section__lead section__lead--left">{{ i18n "lira_made_for_you_lead" | safeHTML }}</p>
+      <p>{{ i18n "lira_made_for_you_body" | safeHTML }}</p>
+    </div>
+  </section>
+
+  <section class="section section--tint section--text-center" id="come-funziona" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ i18n "lira_how_title" }}</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3 class="step__title">{{ i18n "lira_step1_title" }}</h3>
+          <p class="step__text">{{ i18n "lira_step1_text" }}</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3 class="step__title">{{ i18n "lira_step2_title" }}</h3>
+          <p class="step__text">{{ i18n "lira_step2_text" }}</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3 class="step__title">{{ i18n "lira_step3_title" }}</h3>
+          <p class="step__text">{{ i18n "lira_step3_text" }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cards.html" (dict
+    "heading" (i18n "lira_pillars_heading")
+    "cols" 2
+    "items" $pilastri
+  ) }}
+
+  <section class="section" data-reveal>
+    <div class="container container--narrow">
+      <h2 class="section__title">{{ i18n "lira_architecture_title" }}</h2>
+      <p class="section__lead section__lead--left">{{ i18n "lira_architecture_lead" | safeHTML }}</p>
+      <div class="architecture-grid">
+        <div class="architecture-block">
+          <h3>{{ i18n "lira_ragu_title" | safeHTML }}</h3>
+          <p>{{ i18n "lira_ragu_desc" }}</p>
+          <ol class="architecture-steps">
+            <li>{{ i18n "lira_ragu_step1" | safeHTML }}</li>
+            <li>{{ i18n "lira_ragu_step2" | safeHTML }}</li>
+            <li>{{ i18n "lira_ragu_step3" | safeHTML }}</li>
+            <li>{{ i18n "lira_ragu_step4" | safeHTML }}</li>
+          </ol>
+        </div>
+        <div class="architecture-block">
+          <h3>{{ i18n "lira_assistant_title" | safeHTML }}</h3>
+          <p>{{ i18n "lira_assistant_desc" | safeHTML }}</p>
+          <ul class="architecture-features">
+            <li>{{ i18n "lira_assistant_feat1" }}</li>
+            <li>{{ i18n "lira_assistant_feat2" | safeHTML }}</li>
+          </ul>
+        </div>
+      </div>
+      <p class="punchline punchline--centered">{{ i18n "lira_punchline" | safeHTML }}</p>
+    </div>
+  </section>
+
+  {{ partial "comparison-table.html" (dict
+    "heading" (i18n "lira_comparison_heading")
+    "items" $confronto
+  ) }}
+
+  <section class="section section--tint" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ i18n "lira_for_whom_title" }}</h2>
+      <ul class="bullets-list">
+        {{- range $perChi -}}
+        <li>{{ . | markdownify | safeHTML }}</li>
+        {{- end -}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <h2 class="section__title">{{ i18n "lira_what_you_get_title" }}</h2>
+      <ul class="bullets-list bullets-list--check">
+        {{- range $cosaRicevi -}}
+        <li>{{ . | markdownify | safeHTML }}</li>
+        {{- end -}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="manifesto" data-reveal>
+    <div class="container container--narrow">
+      <p class="manifesto__quote">{{ i18n "lira_manifesto_quote" }}</p>
+      <p class="manifesto__sig">{{ i18n "lira_manifesto_sig" }}</p>
+    </div>
+  </section>
+
+  {{ partial "cta.html" (dict
+    "title" (i18n "lira_cta_title")
+    "text" (i18n "lira_cta_text")
+    "cta" (i18n "lira_cta_button")
+    "url" "/contatti/"
+  ) }}
+</article>
+{{ end }}

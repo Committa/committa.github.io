@@ -1,0 +1,170 @@
+baseURL = 'https://committa.it/'
+title = 'Committa'
+defaultContentLanguage = 'it'
+defaultContentLanguageInSubdir = false
+summaryLength = 70
+pluralizelisttitles = false
+
+disableKinds = ['taxonomy', 'term']
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:contentbasename/"
+
+# ── Italian ──────────────────────────────────────────────
+[languages.it]
+  languageCode = 'it'
+  languageName = 'Italiano'
+  weight = 1
+  title = 'Committa'
+
+  [languages.it.params]
+    author = "Marco Baccarani"
+    defaultKeywords = ["committa", "sviluppo software", "industria 4.0", "intelligenza artificiale", "wms", "mes", "hmi", "supply chain", "logistica", "rag", "ai on-premise", "agenti llm", "consulenza IT"]
+    mainSections = ["servizi", "team", "lira"]
+    defaultDescription = "Committa — sviluppo software su misura per l'Industria 4.0 e l'intelligenza artificiale. WMS, MES, HMI, integrazione sistemi, consulenza e assistenza. E LIRA: l'IA che conosce i tuoi documenti, on-premise."
+    hero_title = "Soluzioni su misura per l'Industria 4.0 e l'intelligenza artificiale"
+    hero_lead = "Sviluppo, integrazione e assistenza di sistemi per automazione industriale, WMS, MES e HMI, per alcune delle più grandi multinazionali del food & beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali."
+    style = "trust-authority"
+    enableGoogleMaps = false
+    web3forms_access_key = "b1603ef1-daa7-481c-81e7-75c1d17d02a3"
+    about_us = "Sviluppiamo soluzioni software per l'Industria 4.0 e l'intelligenza artificiale. WMS, MES, HMI, integrazione sistemi e LIRA: l'IA on-premise fondata sui tuoi documenti."
+    copyright = "Copyright (c) 2026, Committa; all rights reserved."
+    foundation_year = 2024
+    date_format = "2 January 2006"
+    dropdown_mouse_over = false
+    disabled_logo = false
+    logo_text = "Committa"
+    logo = "images/MainLogo.svg"
+    logo_inverted = "images/InvertedLogo.svg"
+    logo_small = "images/Symbol.svg"
+    address = """<p class="text-uppercase"><strong>Committa</strong></p>"""
+
+  [languages.it.params.topbar]
+    enable = true
+    text = "Soluzioni software &amp; IA per l'Industria 4.0"
+
+  [languages.it.params.widgets]
+    categories = false
+    tags = false
+    search = false
+
+  [languages.it.params.features]
+    enable = true
+    cols = 3
+
+  [languages.it.params.testimonials]
+    enable = false
+    title = "Testimonianze"
+    subtitle = ""
+
+  [languages.it.params.clients]
+    enable = false
+    title = "I Nostri Clienti"
+    subtitle = ""
+
+  [languages.it.params.see_more]
+    enable = false
+
+  [languages.it.params.recent_posts]
+    enable = false
+
+  [[languages.it.menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[languages.it.menu.main]]
+    name = "Servizi"
+    url = "/servizi/"
+    weight = 2
+
+  [[languages.it.menu.main]]
+    name = "Il team"
+    url = "/team/"
+    weight = 3
+
+  [[languages.it.menu.main]]
+    name = "LIRA"
+    url = "/lira/"
+    weight = 4
+
+# ── English ──────────────────────────────────────────────
+[languages.en]
+  languageCode = 'en'
+  languageName = 'English'
+  weight = 2
+  title = 'Committa'
+
+  [languages.en.params]
+    author = "Marco Baccarani"
+    defaultKeywords = ["committa", "software development", "industry 4.0", "artificial intelligence", "wms", "mes", "hmi", "supply chain", "logistics", "rag", "on-premise ai", "llm agents", "IT consulting"]
+    mainSections = ["servizi", "team", "lira"]
+    defaultDescription = "Committa — custom software development for Industry 4.0 and artificial intelligence. WMS, MES, HMI, system integration, consulting and support. And LIRA: the AI that knows your documents, on-premise."
+    hero_title = "Tailored solutions for Industry 4.0 and artificial intelligence"
+    hero_lead = "Development, integration and support of industrial automation systems, WMS, MES and HMI, for some of the largest food & beverage multinationals and beyond. And AI solutions: LLM agents and on-premise RAG to automate business processes."
+    style = "trust-authority"
+    enableGoogleMaps = false
+    web3forms_access_key = "b1603ef1-daa7-481c-81e7-75c1d17d02a3"
+    about_us = "We develop software solutions for Industry 4.0 and artificial intelligence. WMS, MES, HMI, system integration and LIRA: on-premise AI built on your documents."
+    copyright = "Copyright (c) 2026, Committa; all rights reserved."
+    foundation_year = 2024
+    date_format = "January 2, 2006"
+    dropdown_mouse_over = false
+    disabled_logo = false
+    logo_text = "Committa"
+    logo = "images/MainLogo.svg"
+    logo_inverted = "images/InvertedLogo.svg"
+    logo_small = "images/Symbol.svg"
+    address = """<p class="text-uppercase"><strong>Committa</strong></p>"""
+
+  [languages.en.params.topbar]
+    enable = true
+    text = "Software &amp; AI solutions for Industry 4.0"
+
+  [languages.en.params.widgets]
+    categories = false
+    tags = false
+    search = false
+
+  [languages.en.params.features]
+    enable = true
+    cols = 3
+
+  [languages.en.params.testimonials]
+    enable = false
+    title = "Testimonials"
+    subtitle = ""
+
+  [languages.en.params.clients]
+    enable = false
+    title = "Our Clients"
+    subtitle = ""
+
+  [languages.en.params.see_more]
+    enable = false
+
+  [languages.en.params.recent_posts]
+    enable = false
+
+  [[languages.en.menu.main]]
+    name = "Home"
+    url = "/en/"
+    weight = 1
+
+  [[languages.en.menu.main]]
+    name = "Services"
+    url = "/en/servizi/"
+    weight = 2
+
+  [[languages.en.menu.main]]
+    name = "Team"
+    url = "/en/team/"
+    weight = 3
+
+  [[languages.en.menu.main]]
+    name = "LIRA"
+    url = "/en/lira/"
+    weight = 4

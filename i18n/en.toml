@@ -45,6 +45,9 @@ other = "Industry 4.0, supply chain, logistics and artificial intelligence profe
 [cta_discover_team]
 other = "Meet the team"
 
+[partner_title]
+other = "Partners"
+
 [clients_title]
 other = "Clients we work with"
 
@@ -109,7 +112,7 @@ other = "Go to services"
 other = "Industrial expertise and artificial intelligence, a single point of contact."
 
 [servizi_hero_lead]
-other = "Software development, databases, infrastructure and support &mdash; from requirements to post-implementation support, for some of the largest food &amp; beverage multinationals and beyond. And AI solutions: LLM agents and on-premise RAG to automate business processes."
+other = "Software development, databases, infrastructure and support — from requirements to post-implementation support, for some of the largest food &amp; beverage multinationals and beyond. And AI solutions: LLM agents and on-premise RAG to automate business processes."
 
 [servizi_four_title]
 other = "The four services"
@@ -133,7 +136,7 @@ other = "Free assessment of your use case, operational context and compatibility
 other = "The team"
 
 [team_hero_lead]
-other = "Software developers specialized in Industry 4.0, supply chain and logistics. We work with food &amp; beverage multinationals and beyond, delivering end-to-end solutions &mdash; from requirements to post-implementation support."
+other = "Software developers specialized in Industry 4.0, supply chain and logistics. We work with food &amp; beverage multinationals and beyond, delivering end-to-end solutions — from requirements to post-implementation support."
 
 [team_years_experience_one]
 other = "year of experience"
@@ -148,10 +151,10 @@ other = "Let's work together"
 other = "Free assessment of your project or use case. One email, a reply within 24 business hours."
 
 [lira_hero_title]
-other = "LIRA &mdash; The AI that knows your documents."
+other = "LIRA — The AI that knows your documents."
 
 [lira_hero_lead]
-other = "Precise, verified answers with source citations &mdash; directly from your documents. No data sent outside: everything on-premise."
+other = "Precise, verified answers with source citations — directly from your documents. No data sent outside: everything on-premise."
 
 [lira_demo_cta]
 other = "Request a demo"
@@ -169,7 +172,7 @@ other = "GDPR-ready"
 other = "No third-party data"
 
 [lira_made_for_you_title]
-other = "Made for you, not for everyone."
+other = "Built on your documents. Not on the internet."
 
 [lira_made_for_you_lead]
 other = "Generic AIs are powerful but have a structural limitation: <em>they don't know your company</em>. They don't know what's in your contracts, your technical manuals, the protocols you've been using for twenty years. So they generalize. They make up answers. You need facts, not fantasy."
@@ -208,7 +211,7 @@ other = "Behind the scenes: the two-phase architecture"
 other = "The product's core is a <abbr title=\"Retrieval-Augmented Generation\">RAG</abbr> system: given the user's question, it retrieves relevant passages from your documents and provides them to the LLM as context to generate an answer grounded in those passages — not in the model's memory."
 
 [lira_ragu_title]
-other = "RAG-U &mdash; the retrieval engine"
+other = "RAG-U — the retrieval engine"
 
 [lira_ragu_desc]
 other = "RAG-U is the ingestion, indexing and retrieval pipeline that feeds the LLM with context extracted from your documents."
@@ -226,7 +229,7 @@ other = "<strong>Retrieval</strong> — given the user's question, retrieves the
 other = "<strong>Image indexing</strong> — a parallel worker generates text captions for images and indexes them semantically alongside the text."
 
 [lira_assistant_title]
-other = "LIRA Assistant &mdash; the conversational interface"
+other = "LIRA Assistant — the conversational interface"
 
 [lira_assistant_desc]
 other = "On top of RAG-U runs <strong>LIRA Assistant</strong>, the interface users actually interact with: a chat that responds in natural language, cites sources, and can be branded and integrated into your workflows."

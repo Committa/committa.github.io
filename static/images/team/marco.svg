@@ -18,5 +18,5 @@
     <tspan x="160" dy="74" fill="#38BDF8" font-size="62">B</tspan>
   </text>
   <line x1="120" y1="235" x2="200" y2="235" stroke="#38BDF8" stroke-width="1.75" stroke-opacity="0.7"/>
-  <text x="160" y="262" text-anchor="middle" font-family="Open Sans, system-ui, sans-serif" font-size="13" fill="#FFFFFF" fill-opacity="0.7" letter-spacing="2">FOUNDER · ENGINEER</text>
+
 </svg>

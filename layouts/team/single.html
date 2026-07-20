@@ -1,8 +1,7 @@
 {{ define "main" }}
 {{- $d := index hugo.Data .Site.Language.Lang -}}
 {{- $team := index $d "team" -}}
-{{- $clienti := index $d "clienti" -}}
-{{- $members := $team.members -}}
+  {{- $members := $team.members -}}
 <article class="content-page team-page">
   <header class="hero hero--compact hero--dark">
     <div class="container">
@@ -53,18 +52,6 @@
     </div>
   </section>
   {{- end -}}
-
-  <section class="section section--tint section--text-center" id="clienti" data-reveal>
-    <div class="container">
-      <h2 class="section__title">{{ i18n "clients_title" }}</h2>
-      <p class="section__lead">{{ i18n "clients_lead" }}</p>
-      <ul class="clients-list">
-        {{- range $clienti -}}
-        <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ else if eq . "...and many more" }} clients-list__item--muted{{ end }}">{{ . }}</li>
-        {{- end -}}
-      </ul>
-    </div>
-  </section>
 
   {{ partial "cta.html" (dict
     "title" (i18n "team_cta_title")

@@ -66,15 +66,18 @@
   </div>
 </section>
 
-<section class="section section--tint section--text-center" id="clienti" data-reveal>
+<section class="section section--tint section--text-center" id="partner" data-reveal>
   <div class="container">
-    <h2 class="section__title">{{ i18n "clients_title" }}</h2>
-    <p class="section__lead">{{ i18n "clients_lead" }}</p>
-    <ul class="clients-list">
-      {{- range $clienti -}}
-      <li class="clients-list__item{{ if eq . "...e tanti altri" }} clients-list__item--muted{{ else if eq . "...and many more" }} clients-list__item--muted{{ end }}">{{ . }}</li>
+    <h2 class="section__title">{{ i18n "partner_title" }}</h2>
+    {{- with $clienti -}}
+    <div class="partner-block">
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="partner-block__logo" width="200" height="56" loading="lazy" />
+      <p class="partner-block__name">{{ .name }}</p>
+      {{- with .description -}}
+      <p class="partner-block__desc">{{ . }}</p>
       {{- end -}}
-    </ul>
+    </div>
+    {{- end -}}
   </div>
 </section>
 

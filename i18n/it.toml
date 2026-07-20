@@ -45,6 +45,9 @@ other = "Professionisti dell'Industria 4.0, supply chain, logistica e intelligen
 [cta_discover_team]
 other = "Scopri il team"
 
+[partner_title]
+other = "Partner"
+
 [clients_title]
 other = "Clienti con cui collaboriamo"
 
@@ -109,7 +112,7 @@ other = "Vai ai servizi"
 other = "Competenze industriali e intelligenza artificiale, un solo interlocutore."
 
 [servizi_hero_lead]
-other = "Sviluppo software, database, infrastrutture e assistenza &mdash; dal requisito al supporto post-implementazione, per alcune delle più grandi multinazionali del food &amp; beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali."
+other = "Sviluppo software, database, infrastrutture e assistenza — dal requisito al supporto post-implementazione, per alcune delle più grandi multinazionali del food &amp; beverage e oltre. E soluzioni di intelligenza artificiale: agenti LLM e RAG on-premise per automatizzare i processi aziendali."
 
 [servizi_four_title]
 other = "I quattro servizi"
@@ -133,7 +136,7 @@ other = "Valutazione gratuita del caso d'uso, del contesto operativo e della com
 other = "Il team"
 
 [team_hero_lead]
-other = "Sviluppatori software specializzati nell'Industria 4.0, supply chain e logistica. Lavoriamo con multinazionali del food &amp; beverage e oltre, consegnando soluzioni end-to-end &mdash; dal requisito al supporto post-implementazione."
+other = "Sviluppatori software specializzati nell'Industria 4.0, supply chain e logistica. Lavoriamo con multinazionali del food &amp; beverage e oltre, consegnando soluzioni end-to-end — dal requisito al supporto post-implementazione."
 
 [team_years_experience_one]
 other = "anno di esperienza"
@@ -148,10 +151,10 @@ other = "Lavoriamo insieme"
 other = "Valutazione gratuita del tuo progetto o del tuo caso d'uso. Una mail, una risposta entro 24 ore lavorative."
 
 [lira_hero_title]
-other = "LIRA &mdash; L'IA che conosce i tuoi documenti."
+other = "LIRA — L'IA che conosce i tuoi documenti."
 
 [lira_hero_lead]
-other = "Risposte precise, verificate e con citazione delle fonti &mdash; direttamente dai tuoi documenti. Nessun dato inviato all'esterno: tutto on-premise."
+other = "Risposte precise, verificate e con citazione delle fonti — direttamente dai tuoi documenti. Nessun dato inviato all'esterno: tutto on-premise."
 
 [lira_demo_cta]
 other = "Richiedi una demo"
@@ -169,7 +172,7 @@ other = "GDPR-ready"
 other = "Nessun dato a terzi"
 
 [lira_made_for_you_title]
-other = "Fatta per voi, non per tutti."
+other = "Costruita sui tuoi documenti. Non su internet."
 
 [lira_made_for_you_lead]
 other = "Le IA generiche sono potenti ma hanno un limite strutturale: <em>non conoscono la tua azienda</em>. Non sanno cosa c'è nei tuoi contratti, nei tuoi manuali tecnici, nei protocolli che usi da vent'anni. Così generalizzano. Si inventano le risposte. Tu hai bisogno di fatti, non di fantasia."
@@ -208,7 +211,7 @@ other = "Dietro le quinte: l'architettura in due tempi"
 other = "Il cuore del prodotto è un sistema <abbr title=\"Retrieval-Augmented Generation\">RAG</abbr>: alla domanda dell'utente, recupera i passaggi rilevanti dai tuoi documenti e li fornisce all'LLM come contesto per generare una risposta fondata su quei passaggi — non sulla memoria del modello."
 
 [lira_ragu_title]
-other = "RAG-U &mdash; il motore di retrieval"
+other = "RAG-U — il motore di retrieval"
 
 [lira_ragu_desc]
 other = "RAG-U è la pipeline di ingestion, indicizzazione e retrieval che alimenta l'LLM con il contesto estratto dai tuoi documenti."
@@ -226,7 +229,7 @@ other = "<strong>Retrieval</strong> — alla domanda dell'utente, recupera i pas
 other = "<strong>Indicizzazione immagini</strong> — un worker parallelo genera caption testuali per le immagini e le indicizza semanticamente insieme al testo."
 
 [lira_assistant_title]
-other = "LIRA Assistant &mdash; l'interfaccia conversazionale"
+other = "LIRA Assistant — l'interfaccia conversazionale"
 
 [lira_assistant_desc]
 other = "Sopra RAG-U gira <strong>LIRA Assistant</strong>, l'interfaccia che gli utenti usano effettivamente: una chat che risponde in linguaggio naturale, cita le fonti, può essere brandizzata e integrata nei tuoi flussi."

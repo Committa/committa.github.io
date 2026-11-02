@@ -15,8 +15,8 @@ disableKinds = ['taxonomy', 'term']
 
 # ── Italian ──────────────────────────────────────────────
 [languages.it]
-  languageCode = 'it'
-  languageName = 'Italiano'
+  locale = 'it'
+  label = 'Italiano'
   weight = 1
   title = 'Committa'
 
@@ -93,8 +93,8 @@ disableKinds = ['taxonomy', 'term']
 
 # ── English ──────────────────────────────────────────────
 [languages.en]
-  languageCode = 'en'
-  languageName = 'English'
+  locale = 'en'
+  label = 'English'
   weight = 2
   title = 'Committa'
 

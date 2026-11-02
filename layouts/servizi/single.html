@@ -44,7 +44,7 @@
     <div class="container">
       <h2 class="section__title">{{ .heading }}</h2>
       <p class="section__lead">{{ .lead }}</p>
-      <div class="grid grid--2">
+      <div class="grid grid--3">
         {{- range .cards -}}
         {{ partial "card.html" (dict "icon" .icon "title" .title "description" .description "list" .list "link" .link) }}
         {{- end -}}

@@ -2,6 +2,7 @@ public/
 .hugo_build.lock
 resources/
 temp/
+.tmp/
 
 # Local opencode skill packs (not part of the site)
 .opencode/skills/

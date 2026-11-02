@@ -297,6 +297,9 @@ other = "Sviluppo software"
 [form_reason_lira]
 other = "LIRA"
 
+[form_reason_voice]
+other = "Modelli voce personalizzati"
+
 [form_reason_consulting]
 other = "Consulenza e formazione"
 
@@ -332,3 +335,119 @@ other = "Il PLC della linea di confezionamento 3 utilizza l'area DB50 per i coma
 
 [lira_demo_cite]
 other = "— manuale_tecnico_LC3.pdf, § 4.2, p. 27"
+
+[serena_attribution_title]
+other = "Attribuzione consigliata"
+
+[serena_attribution_lead]
+other = "Usa il blocco della versione che distribuisci. Il dataset ha una propria stringa di attribuzione, indicata nella dataset card."
+
+[serena_attribution_version]
+other = "Versione"
+
+[serena_attribution_note]
+other = "Testo identico a quello della model card: se ridistribuisci il modello, mantieni nome, URL e licenza."
+
+# ── Serena (voce Piper) ──────────────────────────────────
+
+[serena_eyebrow]
+other = "Voce sintetica italiana"
+
+[serena_lead]
+other = "Una voce femminile italiana per Piper, addestrata su un dataset sintetico di 28 ore. Due versioni, stessa voce: medium per i dispositivi con poche risorse, high per la qualità massima."
+
+[serena_download]
+other = "Scarica"
+
+[serena_dataset_cta]
+other = "Dataset su Hugging Face"
+
+[serena_trust_synthetic]
+other = "Voce 100% sintetica"
+
+[serena_trust_license]
+other = "CC BY 4.0"
+
+[serena_trust_piper]
+other = "Pronta per Piper e Home Assistant"
+
+[serena_listen_title]
+other = "Ascolta la voce"
+
+[serena_listen_lead]
+other = "Lo stesso campione, generato dalle due versioni del modello."
+
+[serena_audio_note]
+other = "Campione audio generato dal modello distribuito."
+
+[serena_audio_fallback]
+other = "Apri il modello su Hugging Face"
+
+[serena_specs_title]
+other = "Scheda tecnica"
+
+[serena_models_title]
+other = "Medium o high?"
+
+[serena_models_lead]
+other = "Le due versioni condividono la stessa voce e gli stessi parametri di inferenza: cambiano dimensione del modello e qualità percepita."
+
+[serena_col_model]
+other = "Modello"
+
+[serena_col_quality]
+other = "Qualità"
+
+[serena_col_size]
+other = "Dimensione"
+
+[serena_col_use]
+other = "Uso consigliato"
+
+[serena_pipeline_title]
+other = "Come è nata Serena"
+
+[serena_pipeline_lead]
+other = "La pipeline che trasforma un corpus di testo in un dataset TTS validato, pubblicata come progetto open source."
+
+[serena_generator_link]
+other = "Codice del generatore su GitHub"
+
+[serena_license_title]
+other = "Licenze e condizioni d'utilizzo"
+
+[serena_license_lead]
+other = "Ogni artefatto ha la sua licenza: modello e dataset sono CC BY 4.0 e richiedono attribuzione; il codice del generatore è MIT; i componenti di terze parti mantengono le proprie condizioni."
+
+[serena_col_artifact]
+other = "Artefatto"
+
+[serena_col_license]
+other = "Licenza"
+
+[serena_col_notes]
+other = "Note"
+
+[serena_cta_title]
+other = "Ti serve una voce italiana per il tuo progetto?"
+
+[serena_cta_text]
+other = "Possiamo addestrare, valutare e integrare voci Piper su misura, on-premise o in un prodotto."
+
+[serena_preview_eyebrow]
+other = "Open source"
+
+[serena_preview_title]
+other = "Serena, voce italiana per Piper"
+
+[serena_preview_lead]
+other = "Una voce femminile sintetica, pronta per Piper e Home Assistant. Due modelli, un dataset di 28 ore, licenza CC BY 4.0."
+
+[serena_preview_body]
+other = "L'abbiamo costruita con la nostra pipeline open source: generazione con Qwen3-TTS, validazione ASR e fonetica, normalizzazione. Ascoltala e scarica i modelli."
+
+[cta_discover_serena]
+other = "Scopri Serena"
+
+[serena_preview_listen]
+other = "Ascolta anche la versione medium"

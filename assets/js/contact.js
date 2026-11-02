@@ -2,6 +2,19 @@
   var form = document.querySelector('.contact-form[data-web3forms]');
   if (!form) return;
 
+  var initialReason = new URLSearchParams(window.location.search).get('reason');
+  if (initialReason) {
+    var reasonSelect = form.querySelector('#cf-reason');
+    if (reasonSelect) {
+      for (var r = 0; r < reasonSelect.options.length; r++) {
+        if (reasonSelect.options[r].value === initialReason) {
+          reasonSelect.value = initialReason;
+          break;
+        }
+      }
+    }
+  }
+
   var btn = form.querySelector('[data-submit-btn]');
   var status = form.querySelector('[data-form-status]');
   var originalText = btn.textContent;

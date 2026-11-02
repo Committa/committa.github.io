@@ -18,3 +18,12 @@ cards:
       - "Fully on-premise, no data sent outside"
       - "OpenAI-compatible API and MCP server to integrate into your tools"
     link: "/en/lira/"
+  - title: "Synthetic voices and TTS models"
+    icon: mic
+    description: "We train custom Piper voices and build validated synthetic TTS datasets for applications, IVRs, audiobooks and on-premise devices."
+    list:
+      - "Italian and multilingual voices for Piper, medium and high"
+      - "Synthetic datasets validated with ASR (WER) and phoneme (PER) checks"
+      - "Integration into applications, IVRs and Home Assistant"
+      - "The open-source Serena voice is already available: listen and download it"
+    link: "/en/serena/"

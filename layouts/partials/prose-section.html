@@ -1,0 +1,11 @@
+{{- $s := .section -}}
+{{- with $s -}}
+<section class="section{{ if $.tint }} section--tint{{ end }}" id="{{ $.id }}" data-reveal>
+  <div class="container">
+    <div class="content-page__body content-page__body--flush">
+      <h2 class="section__title">{{ .titolo }}</h2>
+      {{ .corpo | markdownify }}
+    </div>
+  </div>
+</section>
+{{- end -}}

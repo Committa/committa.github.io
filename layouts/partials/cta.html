@@ -3,6 +3,7 @@
 {{- $url := .url | default "/contatti/" -}}
 {{- $secondary := .secondary -}}
 {{- $secondaryUrl := .secondaryUrl | default "/contatti/" -}}
+{{- $reason := .reason -}}
 <section class="cta-band" data-reveal>
   <div class="container cta-band__inner">
     <div class="cta-band__text">
@@ -10,7 +11,7 @@
       {{- with .text -}}<p>{{ . }}</p>{{- end -}}
     </div>
     <div class="cta-band__actions">
-      <a href="{{ $url | relLangURL }}" class="btn btn--primary btn--lg">{{ $cta }}</a>
+      <a href="{{ $url | relLangURL }}{{ with $reason }}?reason={{ . }}{{ end }}" class="btn btn--primary btn--lg">{{ $cta }}</a>
       {{- if $secondary -}}
       <a href="{{ $secondaryUrl | relLangURL }}" class="btn btn--ghost btn--lg">{{ $secondary }}</a>
       {{- end -}}

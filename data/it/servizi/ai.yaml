@@ -18,3 +18,12 @@ cards:
       - "Tutto on-premise, nessun dato inviato all'esterno"
       - "API compatibile OpenIA e server MCP per integrarlo nei tuoi tool"
     link: "/lira/"
+  - title: "Voci sintetiche e modelli TTS"
+    icon: mic
+    description: "Addestriamo voci Piper su misura e costruiamo dataset TTS sintetici validati, per applicazioni, IVR, audiolibri e dispositivi on-premise."
+    list:
+      - "Voci italiane e multilingua per Piper, medium e high"
+      - "Dataset sintetici con validazione ASR (WER) e fonetica (PER)"
+      - "Integrazione in applicazioni, IVR e Home Assistant"
+      - "La voce open source Serena è già disponibile: ascoltala e scaricala"
+    link: "/serena/"

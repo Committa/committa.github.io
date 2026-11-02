@@ -1,0 +1,117 @@
+specifiche:
+  - label: "Language"
+    value: "Neutral standard Italian, no regional accent"
+  - label: "Gender"
+    value: "Female voice"
+  - label: "Sample rate"
+    value: "22,050 Hz, mono, 16 bit"
+  - label: "Format"
+    value: "Piper / ONNX (`.onnx` + `.onnx.json`)"
+  - label: "License"
+    value: "CC BY 4.0"
+  - label: "Dataset"
+    value: "28.27 hours, 30,842 clips"
+
+modelli:
+  - nome: "it_IT-serena-medium"
+    versione: "medium"
+    qualita: "Medium"
+    dimensione: "60.6 MB"
+    uso: "Resource-constrained devices, real-time synthesis, Home Assistant"
+    url: "https://huggingface.co/committa/it_IT-serena-medium"
+    audio: "audio/serena-medium.mp3"
+  - nome: "it_IT-serena-high"
+    versione: "high"
+    qualita: "High"
+    dimensione: "108.9 MB"
+    uso: "Maximum quality for narration and audiobooks; needs more CPU and RAM"
+    url: "https://huggingface.co/committa/it_IT-serena-high"
+    audio: "audio/serena-high.mp3"
+
+pipeline:
+  - numero: 1
+    title: "Generation"
+    text: "Qwen3-TTS-1.7B-Base in voice-cloning (ICL) mode generates the audio from the text corpus, on GPU, with a resumable checkpoint."
+  - numero: 2
+    title: "ASR validation"
+    text: "faster-whisper large-v3 transcribes every clip and rejects those with WER above 0.25."
+  - numero: 3
+    title: "Phoneme check"
+    text: "wav2vec2 + espeak-ng compare phonemes and catch pronunciation errors that ASR misses (PER ≤ 0.30)."
+  - numero: 4
+    title: "Normalization"
+    text: "Mono, 22,050 Hz, loudness to -23 LUFS, silence trimmed, 16-bit PCM."
+  - numero: 5
+    title: "Publishing"
+    text: "LJSpeech manifest, deterministic train/val split and a Hugging Face-ready archive."
+
+sezioni:
+  provenienza:
+    titolo: "Voice provenance"
+    corpo: |
+      Serena is an **entirely synthetic** voice. It was not recorded from a person: a short reference clip was generated with the default "Serena" speaker in Qwen3-TTS CustomVoice, then used as a fixed reference with Qwen3-TTS-1.7B-Base in voice-cloning (ICL) mode to produce all 30,842 clips in the dataset.
+
+      The same reference clip was reused throughout the generation, keeping timbre and pitch consistent. The instruction given to the model was "Read in a calm, neutral tone."
+  dataset:
+    titolo: "The dataset"
+    corpo: |
+      The model is trained on the [serena-synthetic-it-28h](https://huggingface.co/datasets/committa/serena-synthetic-it-28h) dataset, released under CC BY 4.0.
+
+      - **Clips:** 30,842 (27,895 train / 2,947 validation)
+      - **Duration:** 28h 16min (28.27 hours)
+      - **Format:** WAV mono, 22,050 Hz, 16 bit
+      - **Loudness:** normalized to -23 LUFS, silence-trimmed
+      - **Language:** neutral standard Italian, no regional accent
+      - **ASR validation:** WER ≤ 0.25 with faster-whisper large-v3
+      - **Phoneme validation:** PER ≤ 0.30 (wav2vec2 CTC + espeak-ng), mean PER 0.168
+      - **Metadata:** LJSpeech format (`path|transcript`), ready for Piper training
+
+      ### Corpus composition
+
+      The 30,842 sentences come from two sources:
+
+      - **~90% Tatoeba-derived sentences** (Italian, CC BY 2.0 FR), **adapted**: English/American given names were replaced with Italian names and the text received editorial corrections and accent fixes. They are therefore derivative works, not verbatim copies. No Tatoeba audio was used.
+      - **~10% original LLM-authored sentences** (Claude Sonnet, GPT-4o, Qwen, Gemini, DeepSeek), written specifically for the corpus across conversational, technical and literary registers.
+  consigli:
+    titolo: "Usage notes"
+    corpo: |
+      The `.onnx.json` files already embed the recommended settings, chosen after stability testing: Piper's stock defaults (0.667 / 0.8) tend to swallow some phonemes, for example the /r/ in "portato".
+
+      - `noise_scale`: **0.6**
+      - `length_scale`: **1.0**
+      - `noise_w`: **0.4**
+      - `sentence_silence`: **0.2**
+
+      The Home Assistant Piper add-on ignores the `.onnx.json` values and always passes its own: for the best quality it must be configured manually with the same values.
+
+      Pronunciation of rare vocabulary (fewer than 10 occurrences in the training set) can be off; it can be fixed with espeak-ng rules. The training checkpoints are published as a base for fine-tuning other Italian voices: [serena-high-checkpoint](https://huggingface.co/committa/it_IT-serena-high-checkpoint) and [serena-medium-checkpoint](https://huggingface.co/committa/it_IT-serena-medium-checkpoint).
+  limiti:
+    titolo: "Limitations and ethical considerations"
+    corpo: |
+      Like any synthetic voice, Serena can be used to train voice-cloning systems. Users should consider the potential for misuse and make sure their applications comply with applicable laws and ethical guidelines.
+
+licenze:
+  - artefatto: "Piper models (medium and high)"
+    licenza: "CC BY 4.0"
+    url: "https://creativecommons.org/licenses/by/4.0/"
+    note: "Attribution required. `.onnx` and `.onnx.json` must be distributed together."
+  - artefatto: "serena-synthetic-it-28h dataset"
+    licenza: "CC BY 4.0"
+    url: "https://huggingface.co/datasets/committa/serena-synthetic-it-28h"
+    note: "30,842 clips, 28.27 hours, with dataset card and audio samples."
+  - artefatto: "qwen3-tts-dataset-generator"
+    licenza: "MIT"
+    url: "https://github.com/Committa/qwen3-tts-dataset-generator"
+    note: "Code of the generation and validation pipeline."
+  - artefatto: "Qwen3-TTS"
+    licenza: "Apache-2.0"
+    url: "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base"
+    note: "Model used to generate the dataset audio."
+  - artefatto: "Piper (piper1-gpl)"
+    licenza: "GPL-3.0"
+    url: "https://github.com/OHF-Voice/piper1-gpl"
+    note: "Separate runtime: not covered by the model license."
+  - artefatto: "Tatoeba sentences (adapted)"
+    licenza: "CC BY 2.0 FR"
+    url: "https://tatoeba.org"
+    note: "~90% of transcripts. No Tatoeba audio was used."

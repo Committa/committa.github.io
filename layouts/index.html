@@ -53,6 +53,28 @@
   </div>
 </section>
 
+<section class="section section--tint" id="serena-preview" data-reveal>
+  <div class="container serena-preview">
+    <div class="serena-preview__text">
+      <p class="serena-preview__eyebrow">{{ i18n "serena_preview_eyebrow" }}</p>
+      <h2 class="section__title">{{ i18n "serena_preview_title" }}</h2>
+      <p class="section__lead section__lead--left">{{ i18n "serena_preview_lead" }}</p>
+      <p>{{ i18n "serena_preview_body" }}</p>
+      <div class="serena-preview__actions">
+        <a href="{{ "/serena/" | relLangURL }}" class="btn btn--primary btn--lg">{{ i18n "cta_discover_serena" }}</a>
+        <a href="{{ "/serena/" | relLangURL }}#ascolta" class="serena-preview__link">{{ i18n "serena_preview_listen" }}</a>
+      </div>
+    </div>
+    <figure class="audio-demo serena-preview__audio">
+      <figcaption class="audio-demo__label">it_IT-serena-high</figcaption>
+      <audio controls preload="none" src="{{ "audio/serena-high.mp3" | relURL }}">
+        <a href="{{ "/serena/" | relLangURL }}">{{ i18n "serena_preview_listen" }}</a>
+      </audio>
+      <p class="audio-demo__note">{{ i18n "serena_audio_note" }}</p>
+    </figure>
+  </div>
+</section>
+
 <section class="section" id="team" data-reveal>
   <div class="container team-breve">
     <div class="team-breve__text">

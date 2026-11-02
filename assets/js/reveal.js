@@ -1,12 +1,13 @@
 (function () {
   'use strict';
-  if (!('IntersectionObserver' in window)) return;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('[data-reveal]');
-  if (reduce || !els.length) {
+  if (!els.length) return;
+  var revealAll = function () {
     els.forEach(function (el) { el.classList.add('is-revealed'); });
-    return;
-  }
+  };
+  if (!('IntersectionObserver' in window)) { revealAll(); return; }
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { revealAll(); return; }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

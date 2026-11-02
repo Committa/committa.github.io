@@ -1,0 +1,117 @@
+specifiche:
+  - label: "Lingua"
+    value: "Italiano standard neutro, senza accento regionale"
+  - label: "Genere"
+    value: "Voce femminile"
+  - label: "Campione"
+    value: "22.050 Hz, mono, 16 bit"
+  - label: "Formato"
+    value: "Piper / ONNX (`.onnx` + `.onnx.json`)"
+  - label: "Licenza"
+    value: "CC BY 4.0"
+  - label: "Dataset"
+    value: "28,27 ore, 30.842 clip"
+
+modelli:
+  - nome: "it_IT-serena-medium"
+    versione: "medium"
+    qualita: "Media"
+    dimensione: "60,6 MB"
+    uso: "Dispositivi con risorse limitate, sintesi in tempo reale, Home Assistant"
+    url: "https://huggingface.co/committa/it_IT-serena-medium"
+    audio: "audio/serena-medium.mp3"
+  - nome: "it_IT-serena-high"
+    versione: "high"
+    qualita: "Alta"
+    dimensione: "108,9 MB"
+    uso: "Qualità massima per narrazione e audiolibri; richiede più CPU e RAM"
+    url: "https://huggingface.co/committa/it_IT-serena-high"
+    audio: "audio/serena-high.mp3"
+
+pipeline:
+  - numero: 1
+    title: "Generazione"
+    text: "Qwen3-TTS-1.7B-Base in voice cloning (ICL) genera l'audio dal corpus di testo, su GPU, con checkpoint ripartibile."
+  - numero: 2
+    title: "Validazione ASR"
+    text: "faster-whisper large-v3 trascrive ogni clip e scarta quelle con WER superiore a 0,25."
+  - numero: 3
+    title: "Verifica fonetica"
+    text: "wav2vec2 + espeak-ng confrontano i fonemi e intercettano gli errori di pronuncia che l'ASR non vede (PER ≤ 0,30)."
+  - numero: 4
+    title: "Normalizzazione"
+    text: "Mono, 22.050 Hz, loudness a -23 LUFS, silenzi rimossi, PCM 16 bit."
+  - numero: 5
+    title: "Pubblicazione"
+    text: "Manifest LJSpeech, split train/val deterministico e archivio pronto per Hugging Face."
+
+sezioni:
+  provenienza:
+    titolo: "Provenienza della voce"
+    corpo: |
+      Serena è una voce **interamente sintetica**. Non è stata registrata da una persona: un breve clip di riferimento è stato generato con lo speaker predefinito "Serena" di Qwen3-TTS CustomVoice, poi usato come riferimento fisso con Qwen3-TTS-1.7B-Base in modalità voice cloning (ICL) per produrre tutte le 30.842 clip del dataset.
+
+      Lo stesso clip di riferimento è stato riutilizzato per l'intera generazione, così da mantenere costanti timbro e altezza della voce. L'istruzione impartita al modello è stata "Read in a calm, neutral tone.".
+  dataset:
+    titolo: "Il dataset"
+    corpo: |
+      Il modello è addestrato sul dataset [serena-synthetic-it-28h](https://huggingface.co/datasets/committa/serena-synthetic-it-28h), rilasciato con licenza CC BY 4.0.
+
+      - **Clip:** 30.842 (27.895 train / 2.947 validation)
+      - **Durata:** 28h 16min (28,27 ore)
+      - **Formato:** WAV mono, 22.050 Hz, 16 bit
+      - **Loudness:** normalizzato a -23 LUFS, silenzi rimossi
+      - **Lingua:** italiano standard neutro, senza accento regionale
+      - **Validazione ASR:** WER ≤ 0,25 con faster-whisper large-v3
+      - **Validazione fonetica:** PER ≤ 0,30 (wav2vec2 CTC + espeak-ng), PER medio 0,168
+      - **Metadata:** formato LJSpeech (`path|transcript`), pronto per l'addestramento Piper
+
+      ### Composizione del corpus
+
+      Le 30.842 frasi provengono da due fonti:
+
+      - **~90% frasi derivate da Tatoeba** (italiano, CC BY 2.0 FR), **adattate**: i nomi inglesi/americani sono stati sostituiti con nomi italiani e il testo ha ricevuto correzioni editoriali e sugli accenti. Sono quindi opere derivate, non copie letterali. Nessun audio di Tatoeba è stato utilizzato.
+      - **~10% frasi originali generate da LLM** (Claude Sonnet, GPT-4o, Qwen, Gemini, DeepSeek), scritte specificamente per il corpus su registri conversazionale, tecnico e letterario.
+  consigli:
+    titolo: "Consigli d'utilizzo"
+    corpo: |
+      I file `.onnx.json` includono già i parametri consigliati, scelti dopo test di stabilità: i default standard di Piper (0,667 / 0,8) tendono a "mangiare" alcuni fonemi, per esempio la /r/ in "portato".
+
+      - `noise_scale`: **0,6**
+      - `length_scale`: **1,0**
+      - `noise_w`: **0,4**
+      - `sentence_silence`: **0,2**
+
+      L'add-on Piper di Home Assistant ignora i valori del file `.onnx.json` e imposta i propri: per ottenere la qualità migliore va configurato a mano con gli stessi valori.
+
+      La pronuncia di vocaboli rari (meno di 10 occorrenze nel training set) può essere imprecisa; si può correggere con le regole di espeak-ng. I checkpoint di addestramento sono pubblicati come base per fine-tuning di altre voci italiane: [serena-high-checkpoint](https://huggingface.co/committa/it_IT-serena-high-checkpoint) e [serena-medium-checkpoint](https://huggingface.co/committa/it_IT-serena-medium-checkpoint).
+  limiti:
+    titolo: "Limiti e considerazioni etiche"
+    corpo: |
+      Come ogni voce sintetica, Serena può essere usata per addestrare sistemi di clonazione vocale. Chi la utilizza deve considerare i rischi di uso improprio e assicurarsi che le proprie applicazioni rispettino le leggi e le linee guida etiche applicabili.
+
+licenze:
+  - artefatto: "Modelli Piper (medium e high)"
+    licenza: "CC BY 4.0"
+    url: "https://creativecommons.org/licenses/by/4.0/"
+    note: "Attribuzione richiesta. File `.onnx` e `.onnx.json` da distribuire insieme."
+  - artefatto: "Dataset serena-synthetic-it-28h"
+    licenza: "CC BY 4.0"
+    url: "https://huggingface.co/datasets/committa/serena-synthetic-it-28h"
+    note: "30.842 clip, 28,27 ore, con dataset card e campioni audio."
+  - artefatto: "qwen3-tts-dataset-generator"
+    licenza: "MIT"
+    url: "https://github.com/Committa/qwen3-tts-dataset-generator"
+    note: "Codice della pipeline di generazione e validazione."
+  - artefatto: "Qwen3-TTS"
+    licenza: "Apache-2.0"
+    url: "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base"
+    note: "Modello usato per generare l'audio del dataset."
+  - artefatto: "Piper (piper1-gpl)"
+    licenza: "GPL-3.0"
+    url: "https://github.com/OHF-Voice/piper1-gpl"
+    note: "Runtime separato: non è coperto dalla licenza del modello."
+  - artefatto: "Frasi Tatoeba (adattate)"
+    licenza: "CC BY 2.0 FR"
+    url: "https://tatoeba.org"
+    note: "~90% delle trascrizioni. Nessun audio di Tatoeba è stato usato."

@@ -91,6 +91,11 @@ disableKinds = ['taxonomy', 'term']
     url = "/lira/"
     weight = 4
 
+  [[languages.it.menu.main]]
+    name = "Serena"
+    url = "/serena/"
+    weight = 5
+
 # ── English ──────────────────────────────────────────────
 [languages.en]
   locale = 'en'
@@ -168,3 +173,8 @@ disableKinds = ['taxonomy', 'term']
     name = "LIRA"
     url = "/en/lira/"
     weight = 4
+
+  [[languages.en.menu.main]]
+    name = "Serena"
+    url = "/en/serena/"
+    weight = 5
